@@ -18,9 +18,9 @@ export default function Home() {
         <Identidade />
         <Cardapio />
         <Experiencia />
-        <Diferenciais />
         <Novidades />
         <Galeria />
+        <Diferenciais />
       </main>
       <Footer />
       <WhatsappButton />
