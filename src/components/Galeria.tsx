@@ -32,10 +32,11 @@ export default function Galeria() {
               className="font-display font-bold mb-6"
               style={{ fontSize: "clamp(32px,4vw,48px)", lineHeight: 1.1 }}
             >
-              Momentos para<br />compartilhar para sempre.
+              Onde estamos.
             </h2>
             <p className="text-black/65 font-light leading-relaxed mb-8" style={{ fontSize: 18 }}>
-              Acompanhe os bastidores, os pratos e os momentos do Manzi nas redes sociais.
+              Av. Bernardo Sayão, Nº 2159 - Setor Centro Oeste, ao lado do posto Fama, esquina
+              da Av. Bernardo Sayão e Av. Marechal Rondon Goiânia - GO, 74550-020
             </p>
             <a
               href={`https://wa.me/${WHATSAPP_NUMERO}`}
