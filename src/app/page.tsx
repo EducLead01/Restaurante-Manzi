@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Sobre from "@/components/Sobre";
 import Cardapio from "@/components/Cardapio";
 import Filosofia from "@/components/Filosofia";
 import Experiencia from "@/components/Experiencia";
@@ -20,7 +19,6 @@ export default function Home() {
       <main className="flex-grow">
         <Hero />
         <Filosofia />
-        <Sobre />
         <Cardapio />
         <Experiencia />
         <Diferenciais />
