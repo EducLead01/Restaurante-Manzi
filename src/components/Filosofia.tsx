@@ -70,7 +70,7 @@ export default function Filosofia() {
             className="font-display font-bold text-manzi-ink"
             style={{ fontSize: "clamp(28px,4vw,44px)", lineHeight: 1.1 }}
           >
-            Nossa Filosofia
+            Nosso Cardápio
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-manzi-ink/60" style={{ fontSize: 16, lineHeight: 1.6 }}>
             Os pilares que guiam cada prato que sai da nossa cozinha.
