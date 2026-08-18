@@ -5,7 +5,6 @@ import { useState } from "react";
 const LINKS = [
   { href: "#cardapio", label: "Cardápio" },
   { href: "#diferenciais", label: "Diferenciais" },
-  { href: "#localizacao", label: "Localização" },
 ];
 
 export default function Header() {
