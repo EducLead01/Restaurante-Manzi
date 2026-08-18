@@ -2,6 +2,9 @@
 
 import { useState } from "react";
 
+// TODO: substituir pelo número real do restaurante (formato: 55DDDNÚMERO, sem espaços)
+const WHATSAPP_NUMERO = "5500000000000";
+
 const PILARES = [
   {
     titulo: "Executivo de Bife Bovino",
@@ -48,11 +51,15 @@ function PainelConteudo({ pilar }: { pilar: (typeof PILARES)[number] }) {
         {pilar.texto}
       </p>
       <a
-        href="#reservas"
+        href={`https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(
+          `Olá! Quero fazer um pedido rápido: ${pilar.titulo}`
+        )}`}
+        target="_blank"
+        rel="noopener noreferrer"
         className="font-bold text-xs uppercase tracking-wider inline-block mt-8 rounded-full text-manzi-cream"
         style={{ background: "linear-gradient(135deg, #1c1712, #2a2119)", padding: "12px 26px" }}
       >
-        Reserve sua mesa
+        Fazer pedido rápido
       </a>
     </>
   );
