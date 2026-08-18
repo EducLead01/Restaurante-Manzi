@@ -28,11 +28,8 @@ export default function Cardapio() {
             className="font-display font-bold mb-4"
             style={{ fontSize: "clamp(32px,4.5vw,52px)", lineHeight: 1.05 }}
           >
-            Destaques da casa
+            Conheça nossos adicionais
           </h2>
-          <p className="text-black/65 font-light" style={{ fontSize: 18 }}>
-            [Substitua pelos pratos e categorias reais do cardápio do Manzi]
-          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
