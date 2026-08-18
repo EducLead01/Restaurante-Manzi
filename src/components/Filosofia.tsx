@@ -65,38 +65,34 @@ function BotaoPedido({ titulo }: { titulo: string }) {
 /** Item com foto: a imagem preenche o card inteiro, texto sobreposto com gradiente. */
 function PainelFoto({ pilar }: { pilar: ItemCardapio }) {
   return (
-    <div
-      className="relative rounded-2xl overflow-hidden"
-      style={{ aspectRatio: "4/3", minHeight: 340 }}
-    >
-      <Image
-        src={pilar.imagem!}
-        alt={pilar.titulo}
-        fill
-        sizes="(min-width: 1024px) 640px, 100vw"
-        className="object-cover"
-        priority
-      />
+    <div>
       <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(to top, rgba(10,8,6,0.92) 0%, rgba(10,8,6,0.35) 55%, rgba(10,8,6,0.05) 100%)",
-        }}
-      />
-      <div className="relative z-10 flex flex-col justify-end h-full p-8">
+        className="rounded-2xl p-6 md:p-8"
+        style={{ background: "#fff", border: "1.5px solid var(--color-manzi-gold-light)" }}
+      >
         <h3
-          className="font-display font-black text-white"
+          className="font-display font-black text-manzi-ink"
           style={{ fontSize: "clamp(22px,2.6vw,30px)", lineHeight: 1.15 }}
         >
           {pilar.titulo}
         </h3>
-        <p className="mt-3 text-white/85" style={{ fontSize: 15, lineHeight: 1.7, maxWidth: 520 }}>
+        <p className="mt-3 text-manzi-ink/75" style={{ fontSize: 15, lineHeight: 1.7 }}>
           {pilar.texto}
         </p>
         <div className="mt-6">
           <BotaoPedido titulo={pilar.titulo} />
         </div>
+      </div>
+
+      <div className="relative rounded-2xl overflow-hidden mt-4" style={{ aspectRatio: "4/3" }}>
+        <Image
+          src={pilar.imagem!}
+          alt={pilar.titulo}
+          fill
+          sizes="(min-width: 1024px) 640px, 100vw"
+          className="object-cover"
+          priority
+        />
       </div>
     </div>
   );
