@@ -8,9 +8,12 @@ const WHATSAPP_HREF = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponen
 )}`;
 
 const LINKS = [
-  { href: "#filosofia", label: "Cardápio" },
+  { href: "#filosofia", label: "Nosso Cardápio" },
+  { href: "#identidade", label: "Nossa Identidade" },
   { href: "#cardapio", label: "Adicionais" },
-  { href: "#diferenciais", label: "Diferenciais" },
+  { href: "#novidades", label: "Novidades" },
+  { href: "#galeria", label: "Localização" },
+  { href: "#diferenciais", label: "Por que Manzi" },
 ];
 
 export default function Header() {
