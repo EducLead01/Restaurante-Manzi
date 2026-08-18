@@ -35,8 +35,32 @@ const PILARES = [
   },
 ];
 
+function PainelConteudo({ pilar }: { pilar: (typeof PILARES)[number] }) {
+  return (
+    <>
+      <h3
+        className="font-display font-black text-manzi-ink"
+        style={{ fontSize: "clamp(22px,2.6vw,30px)", lineHeight: 1.15 }}
+      >
+        {pilar.titulo}
+      </h3>
+      <p className="mt-4 text-manzi-ink/75" style={{ fontSize: 15, lineHeight: 1.7, maxWidth: 520 }}>
+        {pilar.texto}
+      </p>
+      <a
+        href="#reservas"
+        className="font-bold text-xs uppercase tracking-wider inline-block mt-8 rounded-full text-manzi-cream"
+        style={{ background: "linear-gradient(135deg, #1c1712, #2a2119)", padding: "12px 26px" }}
+      >
+        Reserve sua mesa
+      </a>
+    </>
+  );
+}
+
 export default function Filosofia() {
   const [idx, setIdx] = useState(0);
+  const [openIdx, setOpenIdx] = useState(0);
 
   return (
     <section id="filosofia" className="py-24 bg-manzi-cream">
@@ -53,7 +77,11 @@ export default function Filosofia() {
           </p>
         </div>
 
-        <div className="pilares-grid" style={{ display: "grid", gap: "2rem", alignItems: "start" }}>
+        {/* Desktop: tabs + painel fixo ao lado */}
+        <div
+          className="hidden lg:grid pilares-grid"
+          style={{ gap: "2rem", alignItems: "start" }}
+        >
           <div className="flex flex-col gap-3">
             {PILARES.map((p, i) => (
               <button
@@ -66,7 +94,7 @@ export default function Filosofia() {
             ))}
           </div>
 
-          <div className="relative" style={{ minHeight: 340 }}>
+          <div className="relative" style={{ minHeight: 340, minWidth: 0 }}>
             <svg
               viewBox="0 0 400 200"
               preserveAspectRatio="none"
@@ -86,24 +114,31 @@ export default function Filosofia() {
               />
             </svg>
             <div style={{ position: "relative", zIndex: 10, padding: "44px 40px 44px 68px" }}>
-              <h3
-                className="font-display font-black text-manzi-ink"
-                style={{ fontSize: "clamp(22px,2.6vw,30px)", lineHeight: 1.15 }}
-              >
-                {PILARES[idx].titulo}
-              </h3>
-              <p className="mt-4 text-manzi-ink/75" style={{ fontSize: 15, lineHeight: 1.7, maxWidth: 520 }}>
-                {PILARES[idx].texto}
-              </p>
-              <a
-                href="#reservas"
-                className="font-bold text-xs uppercase tracking-wider inline-block mt-8 rounded-full text-manzi-cream"
-                style={{ background: "linear-gradient(135deg, #1c1712, #2a2119)", padding: "12px 26px" }}
-              >
-                Reserve sua mesa
-              </a>
+              <PainelConteudo pilar={PILARES[idx]} />
             </div>
           </div>
+        </div>
+
+        {/* Mobile/tablet: acordeão — clicar abre o conteúdo logo abaixo do próprio item */}
+        <div className="lg:hidden flex flex-col gap-3">
+          {PILARES.map((p, i) => (
+            <div key={p.titulo}>
+              <button
+                className={`pilar-tab w-full ${i === openIdx ? "active" : ""}`}
+                onClick={() => setOpenIdx(openIdx === i ? -1 : i)}
+              >
+                {p.titulo}
+              </button>
+              {openIdx === i && (
+                <div
+                  className="rounded-2xl mt-3 px-6 py-7"
+                  style={{ background: "#fff", border: "1.5px solid var(--color-manzi-gold-light)" }}
+                >
+                  <PainelConteudo pilar={p} />
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </section>
