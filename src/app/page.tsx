@@ -1,5 +1,4 @@
 import Header from "@/components/Header";
-import Hero from "@/components/Hero";
 import Cardapio from "@/components/Cardapio";
 import Filosofia from "@/components/Filosofia";
 import Experiencia from "@/components/Experiencia";
@@ -17,7 +16,6 @@ export default function Home() {
     <>
       <Header />
       <main className="flex-grow">
-        <Hero />
         <Filosofia />
         <Identidade />
         <Cardapio />

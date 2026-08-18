@@ -70,7 +70,7 @@ export default function Filosofia() {
   const [openIdx, setOpenIdx] = useState(0);
 
   return (
-    <section id="filosofia" className="py-24 bg-manzi-cream">
+    <section id="filosofia" className="pt-36 pb-24 bg-manzi-cream">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
           <h2

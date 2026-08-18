@@ -15,7 +15,7 @@ export default function Header() {
     <header className="fixed top-0 w-full z-50 bg-manzi-cream/95 backdrop-blur-sm border-b border-black/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-18" style={{ height: 72 }}>
-          <a href="#hero" className="font-display font-bold text-xl tracking-wide text-manzi-ink">
+          <a href="#" className="font-display font-bold text-xl tracking-wide text-manzi-ink">
             MANZI
           </a>
 
