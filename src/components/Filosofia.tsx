@@ -1,15 +1,23 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 // TODO: substituir pelo número real do restaurante (formato: 55DDDNÚMERO, sem espaços)
 const WHATSAPP_NUMERO = "5500000000000";
 
-const PILARES = [
+type ItemCardapio = {
+  titulo: string;
+  texto: string;
+  imagem?: string;
+};
+
+const PILARES: ItemCardapio[] = [
   {
     titulo: "Executivo de Bife Bovino",
     texto:
       "[Descrição do prato: acompanhamentos, ponto da carne, o que vem no executivo.]",
+    imagem: "/cardapio/executivo-bife-bovino.webp",
   },
   {
     titulo: "Carne de Panela",
@@ -38,9 +46,14 @@ const PILARES = [
   },
 ];
 
-function PainelConteudo({ pilar }: { pilar: (typeof PILARES)[number] }) {
+function PainelConteudo({ pilar }: { pilar: ItemCardapio }) {
   return (
     <>
+      {pilar.imagem && (
+        <div className="relative rounded-2xl overflow-hidden mb-6" style={{ aspectRatio: "16/9", maxWidth: 420 }}>
+          <Image src={pilar.imagem} alt={pilar.titulo} fill sizes="420px" className="object-cover" />
+        </div>
+      )}
       <h3
         className="font-display font-black text-manzi-ink"
         style={{ fontSize: "clamp(22px,2.6vw,30px)", lineHeight: 1.15 }}
