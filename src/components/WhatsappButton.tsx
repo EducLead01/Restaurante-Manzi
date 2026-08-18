@@ -1,5 +1,4 @@
-// TODO: substituir pelo número real do restaurante (formato: 55DDDNÚMERO, sem espaços)
-const WHATSAPP_NUMERO = "5500000000000";
+const WHATSAPP_NUMERO = "5562942630696";
 
 export default function WhatsappButton() {
   return (

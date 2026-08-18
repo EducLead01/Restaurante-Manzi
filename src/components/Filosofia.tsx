@@ -3,8 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-// TODO: substituir pelo número real do restaurante (formato: 55DDDNÚMERO, sem espaços)
-const WHATSAPP_NUMERO = "5500000000000";
+const WHATSAPP_NUMERO = "5562942630696";
 
 type ItemCardapio = {
   titulo: string;

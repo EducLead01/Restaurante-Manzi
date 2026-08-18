@@ -1,8 +1,7 @@
 const TONS_A = ["#2a2119", "#1c1712", "#7a2331", "#4a1520", "#2a2119", "#1c1712", "#7a2331", "#4a1520"];
 const TONS_B = ["#b8863b", "#8a641f", "#5b6b4f", "#3d4a35", "#b8863b", "#8a641f", "#5b6b4f", "#3d4a35"];
 
-// TODO: substituir pelo número real do restaurante (formato: 55DDDNÚMERO, sem espaços)
-const WHATSAPP_NUMERO = "5500000000000";
+const WHATSAPP_NUMERO = "5562942630696";
 
 function Coluna({ tons, className }: { tons: string[]; className: string }) {
   return (
