@@ -56,8 +56,8 @@ function PainelConteudo({ pilar }: { pilar: (typeof PILARES)[number] }) {
         )}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="font-bold text-xs uppercase tracking-wider inline-block mt-8 rounded-full text-manzi-cream"
-        style={{ background: "linear-gradient(135deg, #1c1712, #2a2119)", padding: "12px 26px" }}
+        className="font-bold text-xs uppercase tracking-wider inline-block mt-8 rounded-full text-white"
+        style={{ background: "#25D366", padding: "12px 26px" }}
       >
         Fazer pedido rápido
       </a>
