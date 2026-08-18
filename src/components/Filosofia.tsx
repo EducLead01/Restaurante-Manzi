@@ -16,7 +16,7 @@ const PILARES: ItemCardapio[] = [
   {
     titulo: "Executivo de Bife Bovino",
     texto:
-      "[Descrição do prato: acompanhamentos, ponto da carne, o que vem no executivo.]",
+      "Arroz soltinho, feijão de caldo, saladinha fresca, farofinha de carne da casa e legumes do dia.",
     imagem: "/cardapio/executivo-bife-bovino.webp",
   },
   {
