@@ -4,34 +4,34 @@ import { useState } from "react";
 
 const PILARES = [
   {
-    titulo: "Ingredientes Selecionados",
+    titulo: "Executivo de Bife Bovino",
     texto:
-      "Trabalhamos com fornecedores escolhidos a dedo, priorizando frescor e procedência em cada item do cardápio.",
+      "[Descrição do prato: acompanhamentos, ponto da carne, o que vem no executivo.]",
   },
   {
-    titulo: "Brasa e Técnica",
+    titulo: "Carne de Panela",
     texto:
-      "Cortes preparados com tempo e precisão, valorizando o sabor natural de cada ingrediente.",
+      "[Descrição do prato: modo de preparo, acompanhamentos.]",
   },
   {
-    titulo: "Hospitalidade Genuína",
+    titulo: "Filé de Frango Grelhado",
     texto:
-      "Cada cliente é recebido como convidado de honra — atenção de perto, do primeiro ao último minuto.",
+      "[Descrição do prato: tempero, acompanhamentos.]",
   },
   {
-    titulo: "Harmonização Perfeita",
+    titulo: "Strogonoff de Frango",
     texto:
-      "Vinhos e drinks selecionados para elevar cada prato e completar a experiência à mesa.",
+      "[Descrição do prato: acompanhamentos, porção.]",
   },
   {
-    titulo: "Sazonalidade",
+    titulo: "Prato do Dia",
     texto:
-      "Cardápio que acompanha as estações, sempre com o que há de melhor em cada época do ano.",
+      "[Descrição: opção que muda diariamente — combine com o cardápio da semana.]",
   },
   {
-    titulo: "Experiência Completa",
+    titulo: "Tele Entregas",
     texto:
-      "Do ambiente ao atendimento, cada detalhe é pensado para tornar a visita memorável.",
+      "Peça pelo telefone ou WhatsApp e receba em casa — entrega grátis em um raio de até 3km do restaurante.",
   },
 ];
 
