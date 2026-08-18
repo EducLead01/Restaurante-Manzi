@@ -46,36 +46,104 @@ const PILARES: ItemCardapio[] = [
   },
 ];
 
-function PainelConteudo({ pilar }: { pilar: ItemCardapio }) {
+function BotaoPedido({ titulo }: { titulo: string }) {
   return (
-    <>
-      {pilar.imagem && (
-        <div className="relative rounded-2xl overflow-hidden mb-6" style={{ aspectRatio: "16/9", maxWidth: 420 }}>
-          <Image src={pilar.imagem} alt={pilar.titulo} fill sizes="420px" className="object-cover" />
-        </div>
-      )}
-      <h3
-        className="font-display font-black text-manzi-ink"
-        style={{ fontSize: "clamp(22px,2.6vw,30px)", lineHeight: 1.15 }}
-      >
-        {pilar.titulo}
-      </h3>
-      <p className="mt-4 text-manzi-ink/75" style={{ fontSize: 15, lineHeight: 1.7, maxWidth: 520 }}>
-        {pilar.texto}
-      </p>
-      <a
-        href={`https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(
-          `Olá! Quero fazer um pedido rápido: ${pilar.titulo}`
-        )}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="font-bold text-xs uppercase tracking-wider inline-block mt-8 rounded-full text-white"
-        style={{ background: "#25D366", padding: "12px 26px" }}
-      >
-        Fazer pedido rápido
-      </a>
-    </>
+    <a
+      href={`https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(
+        `Olá! Quero fazer um pedido rápido: ${titulo}`
+      )}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="font-bold text-xs uppercase tracking-wider inline-block rounded-full text-white"
+      style={{ background: "#25D366", padding: "12px 26px" }}
+    >
+      Fazer pedido rápido
+    </a>
   );
+}
+
+/** Item com foto: a imagem preenche o card inteiro, texto sobreposto com gradiente. */
+function PainelFoto({ pilar }: { pilar: ItemCardapio }) {
+  return (
+    <div
+      className="relative rounded-2xl overflow-hidden"
+      style={{ aspectRatio: "4/3", minHeight: 340 }}
+    >
+      <Image
+        src={pilar.imagem!}
+        alt={pilar.titulo}
+        fill
+        sizes="(min-width: 1024px) 640px, 100vw"
+        className="object-cover"
+        priority
+      />
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(to top, rgba(10,8,6,0.92) 0%, rgba(10,8,6,0.35) 55%, rgba(10,8,6,0.05) 100%)",
+        }}
+      />
+      <div className="relative z-10 flex flex-col justify-end h-full p-8">
+        <h3
+          className="font-display font-black text-white"
+          style={{ fontSize: "clamp(22px,2.6vw,30px)", lineHeight: 1.15 }}
+        >
+          {pilar.titulo}
+        </h3>
+        <p className="mt-3 text-white/85" style={{ fontSize: 15, lineHeight: 1.7, maxWidth: 520 }}>
+          {pilar.texto}
+        </p>
+        <div className="mt-6">
+          <BotaoPedido titulo={pilar.titulo} />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/** Item sem foto: painel com moldura recortada, como antes. */
+function PainelTexto({ pilar }: { pilar: ItemCardapio }) {
+  return (
+    <div className="relative" style={{ minHeight: 340, minWidth: 0 }}>
+      <svg
+        viewBox="0 0 400 200"
+        preserveAspectRatio="none"
+        style={{
+          position: "absolute",
+          inset: 0,
+          width: "100%",
+          height: "100%",
+          filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.05))",
+        }}
+      >
+        <path
+          d="M40,0 L386,0 Q400,0 400,14 L400,186 Q400,200 386,200 L40,200 L0,100 Z"
+          fill="var(--color-manzi-cream)"
+          stroke="var(--color-manzi-gold-light)"
+          strokeWidth={2.5}
+        />
+      </svg>
+      <div style={{ position: "relative", zIndex: 10, padding: "44px 40px 44px 68px" }}>
+        <h3
+          className="font-display font-black text-manzi-ink"
+          style={{ fontSize: "clamp(22px,2.6vw,30px)", lineHeight: 1.15 }}
+        >
+          {pilar.titulo}
+        </h3>
+        <p className="mt-4 text-manzi-ink/75" style={{ fontSize: 15, lineHeight: 1.7, maxWidth: 520 }}>
+          {pilar.texto}
+        </p>
+        <div className="mt-8">
+          <BotaoPedido titulo={pilar.titulo} />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Painel({ pilar }: { pilar: ItemCardapio }) {
+  return pilar.imagem ? <PainelFoto pilar={pilar} /> : <PainelTexto pilar={pilar} />;
 }
 
 export default function Filosofia() {
@@ -114,29 +182,7 @@ export default function Filosofia() {
             ))}
           </div>
 
-          <div className="relative" style={{ minHeight: 340, minWidth: 0 }}>
-            <svg
-              viewBox="0 0 400 200"
-              preserveAspectRatio="none"
-              style={{
-                position: "absolute",
-                inset: 0,
-                width: "100%",
-                height: "100%",
-                filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.05))",
-              }}
-            >
-              <path
-                d="M40,0 L386,0 Q400,0 400,14 L400,186 Q400,200 386,200 L40,200 L0,100 Z"
-                fill="var(--color-manzi-cream)"
-                stroke="var(--color-manzi-gold-light)"
-                strokeWidth={2.5}
-              />
-            </svg>
-            <div style={{ position: "relative", zIndex: 10, padding: "44px 40px 44px 68px" }}>
-              <PainelConteudo pilar={PILARES[idx]} />
-            </div>
-          </div>
+          <Painel pilar={PILARES[idx]} />
         </div>
 
         {/* Mobile/tablet: acordeão — clicar abre o conteúdo logo abaixo do próprio item */}
@@ -150,11 +196,8 @@ export default function Filosofia() {
                 {p.titulo}
               </button>
               {openIdx === i && (
-                <div
-                  className="rounded-2xl mt-3 px-6 py-7"
-                  style={{ background: "#fff", border: "1.5px solid var(--color-manzi-gold-light)" }}
-                >
-                  <PainelConteudo pilar={p} />
+                <div className="mt-3">
+                  <Painel pilar={p} />
                 </div>
               )}
             </div>
