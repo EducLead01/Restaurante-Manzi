@@ -1,17 +1,17 @@
 const CATEGORIAS = [
   {
-    nome: "Entradas",
-    desc: "Para abrir o apetite",
+    nome: "Molhos e Temperos",
+    desc: "Aquele toque especial no seu prato",
     gradient: "linear-gradient(135deg, #7a2331 0%, #4a1520 100%)",
   },
   {
-    nome: "Pratos Principais",
-    desc: "Carnes na brasa e criações autorais",
+    nome: "Porções Extras",
+    desc: "Reforce seu pedido com mais acompanhamento",
     gradient: "linear-gradient(135deg, #2a2119 0%, #1c1712 100%)",
   },
   {
-    nome: "Sobremesas",
-    desc: "O ponto final perfeito",
+    nome: "Bebidas",
+    desc: "Para acompanhar sua refeição",
     gradient: "linear-gradient(135deg, #b8863b 0%, #8a641f 100%)",
   },
 ];
