@@ -19,10 +19,10 @@ export default function Home() {
       <main className="flex-grow">
         <Hero />
         <Filosofia />
+        <Identidade />
         <Cardapio />
         <Experiencia />
         <Diferenciais />
-        <Identidade />
         <Novidades />
         <Galeria />
         <Localizacao />
