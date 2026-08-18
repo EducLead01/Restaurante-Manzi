@@ -1,6 +1,9 @@
 const TONS_A = ["#2a2119", "#1c1712", "#7a2331", "#4a1520", "#2a2119", "#1c1712", "#7a2331", "#4a1520"];
 const TONS_B = ["#b8863b", "#8a641f", "#5b6b4f", "#3d4a35", "#b8863b", "#8a641f", "#5b6b4f", "#3d4a35"];
 
+// TODO: substituir pelo número real do restaurante (formato: 55DDDNÚMERO, sem espaços)
+const WHATSAPP_NUMERO = "5500000000000";
+
 function Coluna({ tons, className }: { tons: string[]; className: string }) {
   return (
     <div className="flex-1 overflow-hidden">
@@ -35,11 +38,13 @@ export default function Galeria() {
               Acompanhe os bastidores, os pratos e os momentos do Manzi nas redes sociais.
             </p>
             <a
-              href="#reservas"
-              className="inline-flex items-center justify-center gap-2 font-black text-sm px-7 py-4 rounded-xl text-manzi-cream transition-opacity hover:opacity-90"
-              style={{ background: "linear-gradient(135deg, #1c1712, #2a2119)" }}
+              href={`https://wa.me/${WHATSAPP_NUMERO}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 font-black text-sm px-7 py-4 rounded-xl text-white transition-opacity hover:opacity-90"
+              style={{ background: "#25D366" }}
             >
-              Reserve sua visita
+              Fale conosco no WhatsApp
             </a>
           </div>
         </div>

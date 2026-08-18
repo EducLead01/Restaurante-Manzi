@@ -2,6 +2,12 @@
 
 import { useState } from "react";
 
+// TODO: substituir pelo número real do restaurante (formato: 55DDDNÚMERO, sem espaços)
+const WHATSAPP_NUMERO = "5500000000000";
+const WHATSAPP_HREF = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(
+  "Olá! Quero fazer um pedido."
+)}`;
+
 const LINKS = [
   { href: "#cardapio", label: "Cardápio" },
   { href: "#diferenciais", label: "Diferenciais" },
@@ -27,11 +33,13 @@ export default function Header() {
           </nav>
 
           <a
-            href="#reservas"
-            className="hidden md:inline-flex items-center font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-full text-manzi-cream transition-opacity hover:opacity-90"
-            style={{ background: "linear-gradient(135deg, #1c1712, #2a2119)" }}
+            href={WHATSAPP_HREF}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:inline-flex items-center font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-full text-white transition-opacity hover:opacity-90"
+            style={{ background: "#25D366" }}
           >
-            Reservar mesa
+            Peça pelo WhatsApp
           </a>
 
           <button
@@ -63,12 +71,14 @@ export default function Header() {
             </a>
           ))}
           <a
-            href="#reservas"
+            href={WHATSAPP_HREF}
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setOpen(false)}
-            className="font-bold text-sm uppercase tracking-wider px-6 py-3.5 rounded-full text-manzi-cream text-center"
-            style={{ background: "linear-gradient(135deg, #1c1712, #2a2119)" }}
+            className="font-bold text-sm uppercase tracking-wider px-6 py-3.5 rounded-full text-white text-center"
+            style={{ background: "#25D366" }}
           >
-            Reservar mesa
+            Peça pelo WhatsApp
           </a>
         </div>
       </div>

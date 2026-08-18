@@ -54,7 +54,7 @@ export default function Cardapio() {
 
         <div className="text-center mt-12">
           <a
-            href="#reservas"
+            href="#filosofia"
             className="inline-flex font-bold text-xs uppercase tracking-wider px-8 py-4 rounded-full text-manzi-cream transition-opacity hover:opacity-90"
             style={{ background: "linear-gradient(135deg, #1c1712, #2a2119)" }}
           >
