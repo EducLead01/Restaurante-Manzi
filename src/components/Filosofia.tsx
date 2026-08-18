@@ -186,10 +186,13 @@ export default function Filosofia() {
           {PILARES.map((p, i) => (
             <div key={p.titulo}>
               <button
-                className={`pilar-tab w-full ${i === openIdx ? "active" : ""}`}
+                className={`pilar-tab w-full flex items-center justify-between gap-3 ${
+                  i === openIdx ? "active" : ""
+                }`}
                 onClick={() => setOpenIdx(openIdx === i ? -1 : i)}
               >
-                {p.titulo}
+                <span>{p.titulo}</span>
+                <span className="identidade-acc-toggle">{i === openIdx ? "−" : "+"}</span>
               </button>
               {openIdx === i && (
                 <div className="mt-3">
