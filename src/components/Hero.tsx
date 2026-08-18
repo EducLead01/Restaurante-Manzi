@@ -1,29 +1,29 @@
 export default function Hero() {
   return (
-    <section
-      id="hero"
-      className="relative flex items-end justify-start overflow-hidden min-h-screen"
-    >
+    <section id="hero" className="relative flex items-end justify-start overflow-hidden">
       {/*
-        TODO: substituir por foto/vídeo real do ambiente ou de um prato.
-        Por enquanto, um gradiente escuro faz o papel do hero.
+        TODO: substituir por foto/vídeo real do ambiente ou de um prato
+        (mesma técnica do hero original: no mobile a mídia vira um card
+        arredondado contido; no desktop é full-bleed).
       */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(circle at 30% 20%, #2a2119 0%, #1c1712 55%, #0f0c09 100%)",
-        }}
-      />
-      <div
-        className="absolute inset-0 opacity-40"
-        style={{
-          background:
-            "linear-gradient(to top, rgba(10,8,6,0.95) 0%, rgba(10,8,6,0.2) 55%, rgba(10,8,6,0.5) 100%)",
-        }}
-      />
+      <div className="hero-media rounded-2xl md:rounded-none overflow-hidden">
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(circle at 30% 20%, #2a2119 0%, #1c1712 55%, #0f0c09 100%)",
+          }}
+        />
+        <div
+          className="absolute inset-0 opacity-40"
+          style={{
+            background:
+              "linear-gradient(to top, rgba(10,8,6,0.95) 0%, rgba(10,8,6,0.2) 55%, rgba(10,8,6,0.5) 100%)",
+          }}
+        />
+      </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24 pt-40 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24 pt-8 md:pt-40 w-full">
         <p className="text-manzi-gold-light text-xs font-bold uppercase tracking-[0.35em] mb-6">
           Cozinha autoral &middot; Carnes nobres
         </p>
@@ -54,7 +54,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 text-manzi-cream/30">
+      <div className="hidden md:block absolute bottom-8 left-1/2 -translate-x-1/2 z-10 text-manzi-cream/30">
         <svg className="w-5 h-5 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
         </svg>

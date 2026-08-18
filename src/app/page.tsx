@@ -2,8 +2,12 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Sobre from "@/components/Sobre";
 import Cardapio from "@/components/Cardapio";
+import Filosofia from "@/components/Filosofia";
+import Experiencia from "@/components/Experiencia";
 import Diferenciais from "@/components/Diferenciais";
-import Estatisticas from "@/components/Estatisticas";
+import Identidade from "@/components/Identidade";
+import Novidades from "@/components/Novidades";
+import Galeria from "@/components/Galeria";
 import Localizacao from "@/components/Localizacao";
 import Reservas from "@/components/Reservas";
 import Footer from "@/components/Footer";
@@ -17,8 +21,12 @@ export default function Home() {
         <Hero />
         <Sobre />
         <Cardapio />
+        <Filosofia />
+        <Experiencia />
         <Diferenciais />
-        <Estatisticas />
+        <Identidade />
+        <Novidades />
+        <Galeria />
         <Localizacao />
         <Reservas />
       </main>

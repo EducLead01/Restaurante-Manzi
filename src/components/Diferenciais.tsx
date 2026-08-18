@@ -1,6 +1,6 @@
 const ITENS = [
   {
-    cor: "#b8863b",
+    cor: "var(--color-manzi-gold)",
     titulo: "Carnes selecionadas",
     texto: "Cortes nobres, maturados e preparados no ponto certo.",
     icone: (
@@ -11,7 +11,7 @@ const ITENS = [
     ),
   },
   {
-    cor: "#7a2331",
+    cor: "var(--color-manzi-wine)",
     titulo: "Brasa lenta",
     texto: "Técnica e paciência para realçar cada sabor.",
     icone: (
@@ -22,7 +22,7 @@ const ITENS = [
     ),
   },
   {
-    cor: "#1c1712",
+    cor: "var(--color-manzi-ink)",
     titulo: "Ambiente aconchegante",
     texto: "Espaço pensado para momentos em boa companhia.",
     icone: (
@@ -33,7 +33,7 @@ const ITENS = [
     ),
   },
   {
-    cor: "#8a641f",
+    cor: "var(--color-manzi-sage)",
     titulo: "Carta de vinhos",
     texto: "Rótulos selecionados para harmonizar cada prato.",
     icone: (
@@ -47,47 +47,50 @@ const ITENS = [
   },
 ];
 
-export default function Diferenciais() {
+function Card({ item }: { item: (typeof ITENS)[number] }) {
   return (
-    <section id="diferenciais" className="py-24 bg-manzi-cream">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-14">
-          <p className="text-manzi-gold text-xs font-bold uppercase tracking-[0.35em] mb-4">
-            Diferenciais
-          </p>
-          <h2
-            className="font-display font-bold"
-            style={{ fontSize: "clamp(28px,4vw,44px)", lineHeight: 1.1 }}
-          >
-            Por que o Manzi
-          </h2>
+    <div className="flip-card flex-shrink-0" style={{ height: 260, width: 280 }}>
+      <div className="flip-card-inner">
+        <div
+          className="flip-card-face flex flex-col items-center justify-center text-center px-6 bg-white"
+          style={{ border: `1.5px solid ${item.cor}` }}
+        >
+          <div className="mb-4" style={{ color: item.cor }}>
+            {item.icone}
+          </div>
+          <h3 className="font-bold text-manzi-ink" style={{ fontSize: 16 }}>
+            {item.titulo}
+          </h3>
         </div>
+        <div
+          className="flip-card-face flip-card-back flex items-center justify-center text-center px-6"
+          style={{ background: item.cor }}
+        >
+          <p className="text-white/90 text-sm leading-relaxed">{item.texto}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {ITENS.map((item) => (
-            <div key={item.titulo} className="flip-card" style={{ height: 240 }}>
-              <div className="flip-card-inner">
-                <div
-                  className="flip-card-face flex flex-col items-center justify-center text-center px-6 bg-white"
-                  style={{ border: `1.5px solid ${item.cor}` }}
-                >
-                  <div className="mb-4" style={{ color: item.cor }}>
-                    {item.icone}
-                  </div>
-                  <h3 className="font-bold text-manzi-ink" style={{ fontSize: 16 }}>
-                    {item.titulo}
-                  </h3>
-                </div>
-                <div
-                  className="flip-card-face flip-card-back flex items-center justify-center text-center px-6"
-                  style={{ background: item.cor }}
-                >
-                  <p className="text-white/90 text-sm leading-relaxed">{item.texto}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+export default function Diferenciais() {
+  const track = [...ITENS, ...ITENS];
+
+  return (
+    <section id="diferenciais" className="py-20 overflow-hidden bg-manzi-cream marquee-pause">
+      <div className="text-center mb-14 px-4">
+        <p className="text-manzi-gold text-xs font-bold uppercase tracking-[0.35em] mb-4">
+          Diferenciais
+        </p>
+        <h2 className="font-display font-bold" style={{ fontSize: "clamp(28px,4vw,44px)", lineHeight: 1.1 }}>
+          Por que o Manzi
+        </h2>
+      </div>
+
+      <div className="marquee-track flex items-stretch gap-6" style={{ width: "max-content" }}>
+        {track.map((item, i) => (
+          <Card key={`${item.titulo}-${i}`} item={item} />
+        ))}
       </div>
     </section>
   );
