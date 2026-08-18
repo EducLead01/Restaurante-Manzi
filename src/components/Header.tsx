@@ -8,7 +8,8 @@ const WHATSAPP_HREF = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponen
 )}`;
 
 const LINKS = [
-  { href: "#cardapio", label: "Cardápio" },
+  { href: "#filosofia", label: "Cardápio" },
+  { href: "#cardapio", label: "Adicionais" },
   { href: "#diferenciais", label: "Diferenciais" },
 ];
 
