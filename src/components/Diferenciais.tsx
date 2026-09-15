@@ -83,7 +83,7 @@ export default function Diferenciais() {
           Diferenciais
         </p>
         <h2 className="font-display font-bold" style={{ fontSize: "clamp(28px,4vw,44px)", lineHeight: 1.1 }}>
-          Por que o Manzi
+          Conheça nossos molhos e adicionais
         </h2>
       </div>
 

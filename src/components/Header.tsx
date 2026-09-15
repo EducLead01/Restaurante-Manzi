@@ -11,7 +11,7 @@ const LINKS = [
   { href: "#filosofia", label: "Nosso Cardápio" },
   { href: "#identidade", label: "Nossa Identidade" },
   { href: "#galeria", label: "Localização" },
-  { href: "#diferenciais", label: "Por que Manzi" },
+  { href: "#diferenciais", label: "Molhos e Adicionais" },
 ];
 
 export default function Header() {
