@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 
 // TODO: substituir os gradientes pelos slides reais (fotos do salão, pratos, eventos)
 const SLIDES = [
-  { legenda: "Salão principal", gradient: "linear-gradient(135deg, #2a2119 0%, #1c1712 100%)" },
-  { legenda: "Prato assinatura", gradient: "linear-gradient(135deg, #7a2331 0%, #4a1520 100%)" },
-  { legenda: "Adega", gradient: "linear-gradient(135deg, #b8863b 0%, #8a641f 100%)" },
+  { legenda: "Salão principal", gradient: "linear-gradient(135deg, #1f1f1f 0%, #141414 100%)" },
+  { legenda: "Prato assinatura", gradient: "linear-gradient(135deg, #8c3a3d 0%, #4a0e15 100%)" },
+  { legenda: "Adega", gradient: "linear-gradient(135deg, #d91e2b 0%, #a81824 100%)" },
 ];
 
 const STATS = [
@@ -25,7 +25,7 @@ export default function Experiencia() {
   }, [n]);
 
   return (
-    <section className="relative bg-manzi-cream-2">
+    <section className="relative bg-manzi-white-2">
       <div className="relative overflow-hidden" style={{ height: "60vh", minHeight: 380, maxHeight: 560 }}>
         <div
           className="flex h-full transition-transform duration-700 ease-out"
@@ -41,7 +41,7 @@ export default function Experiencia() {
                     "linear-gradient(to top, rgba(10,8,6,0.85) 0%, rgba(10,8,6,0.1) 55%, rgba(10,8,6,0.3) 100%)",
                 }}
               />
-              <span className="absolute bottom-10 left-8 text-manzi-cream/80 font-bold text-sm uppercase tracking-widest">
+              <span className="absolute bottom-10 left-8 text-manzi-white/80 font-bold text-sm uppercase tracking-widest">
                 {slide.legenda}
               </span>
             </div>
@@ -79,7 +79,7 @@ export default function Experiencia() {
               style={{
                 width: i === idx ? 20 : 8,
                 height: 8,
-                background: i === idx ? "var(--color-manzi-gold)" : "rgba(255,255,255,0.3)",
+                background: i === idx ? "var(--color-manzi-red)" : "rgba(255,255,255,0.3)",
               }}
             />
           ))}
@@ -88,8 +88,8 @@ export default function Experiencia() {
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative" style={{ marginTop: -36, zIndex: 20 }}>
         <div
-          className="grid grid-cols-1 sm:grid-cols-3 rounded-2xl overflow-hidden bg-manzi-cream"
-          style={{ border: "1px solid rgba(28,23,18,0.1)" }}
+          className="grid grid-cols-1 sm:grid-cols-3 rounded-2xl overflow-hidden bg-manzi-white"
+          style={{ border: "1px solid rgba(20,20,20,0.1)" }}
         >
           {STATS.map((stat, i) => (
             <div
@@ -98,7 +98,7 @@ export default function Experiencia() {
                 i < STATS.length - 1 ? "border-b sm:border-b-0 sm:border-r border-black/10" : ""
               }`}
             >
-              <p className="font-display font-bold text-manzi-gold" style={{ fontSize: 22 }}>
+              <p className="font-display font-bold text-manzi-red" style={{ fontSize: 22 }}>
                 {stat.valor}
               </p>
               <p className="text-black/60 text-xs mt-2 leading-relaxed">{stat.texto}</p>

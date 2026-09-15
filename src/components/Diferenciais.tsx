@@ -1,6 +1,6 @@
 const ITENS = [
   {
-    cor: "var(--color-manzi-gold)",
+    cor: "var(--color-manzi-red)",
     titulo: "Carnes selecionadas",
     texto: "Cortes nobres, maturados e preparados no ponto certo.",
     icone: (
@@ -11,7 +11,7 @@ const ITENS = [
     ),
   },
   {
-    cor: "var(--color-manzi-wine)",
+    cor: "var(--color-manzi-marsala)",
     titulo: "Brasa lenta",
     texto: "Técnica e paciência para realçar cada sabor.",
     icone: (
@@ -22,7 +22,7 @@ const ITENS = [
     ),
   },
   {
-    cor: "var(--color-manzi-ink)",
+    cor: "var(--color-manzi-black)",
     titulo: "Ambiente aconchegante",
     texto: "Espaço pensado para momentos em boa companhia.",
     icone: (
@@ -33,7 +33,7 @@ const ITENS = [
     ),
   },
   {
-    cor: "var(--color-manzi-sage)",
+    cor: "var(--color-manzi-bordo)",
     titulo: "Carta de vinhos",
     texto: "Rótulos selecionados para harmonizar cada prato.",
     icone: (
@@ -58,7 +58,7 @@ function Card({ item }: { item: (typeof ITENS)[number] }) {
           <div className="mb-4" style={{ color: item.cor }}>
             {item.icone}
           </div>
-          <h3 className="font-bold text-manzi-ink" style={{ fontSize: 16 }}>
+          <h3 className="font-bold text-manzi-black" style={{ fontSize: 16 }}>
             {item.titulo}
           </h3>
         </div>
@@ -77,9 +77,9 @@ export default function Diferenciais() {
   const track = [...ITENS, ...ITENS];
 
   return (
-    <section id="diferenciais" className="py-20 overflow-hidden bg-manzi-cream marquee-pause">
+    <section id="diferenciais" className="py-20 overflow-hidden bg-manzi-white marquee-pause">
       <div className="text-center mb-14 px-4">
-        <p className="text-manzi-gold text-xs font-bold uppercase tracking-[0.35em] mb-4">
+        <p className="text-manzi-red text-xs font-bold uppercase tracking-[0.35em] mb-4">
           Diferenciais
         </p>
         <h2 className="font-display font-bold" style={{ fontSize: "clamp(28px,4vw,44px)", lineHeight: 1.1 }}>

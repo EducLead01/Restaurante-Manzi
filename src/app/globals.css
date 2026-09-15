@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f4ede3;
-  --foreground: #1c1712;
+  --background: #ffffff;
+  --foreground: #141414;
 }
 
 @theme inline {
@@ -11,14 +11,14 @@
   --font-sans: var(--font-inter);
   --font-display: var(--font-playfair);
 
-  --color-manzi-cream: #f4ede3;
-  --color-manzi-cream-2: #ece0cd;
-  --color-manzi-ink: #1c1712;
-  --color-manzi-ink-2: #2a2119;
-  --color-manzi-gold: #b8863b;
-  --color-manzi-gold-light: #e4c384;
-  --color-manzi-wine: #7a2331;
-  --color-manzi-sage: #5b6b4f;
+  --color-manzi-white: #ffffff;
+  --color-manzi-white-2: #f2f2f2;
+  --color-manzi-black: #141414;
+  --color-manzi-black-2: #1f1f1f;
+  --color-manzi-red: #d91e2b;
+  --color-manzi-red-light: #f4c7ca;
+  --color-manzi-marsala: #8c3a3d;
+  --color-manzi-bordo: #4a0e15;
 }
 
 * {
@@ -26,42 +26,42 @@
 }
 
 ::selection {
-  background: var(--color-manzi-gold);
-  color: var(--color-manzi-ink);
+  background: var(--color-manzi-red);
+  color: var(--color-manzi-white);
 }
 
 body {
-  background: var(--color-manzi-cream);
-  color: var(--color-manzi-ink);
+  background: var(--color-manzi-white);
+  color: var(--color-manzi-black);
 }
 
 ::-webkit-scrollbar {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--color-manzi-cream);
+  background: var(--color-manzi-white);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-manzi-gold);
+  background: var(--color-manzi-red);
   border-radius: 10px;
 }
 
 .nav-link {
-  color: var(--color-manzi-ink);
+  color: var(--color-manzi-black);
   transition: color 0.2s ease;
 }
 .nav-link:hover {
-  color: var(--color-manzi-gold);
+  color: var(--color-manzi-red);
 }
 
 .feature-card {
-  border: 1px solid rgba(28, 23, 18, 0.1);
+  border: 1px solid rgba(20, 20, 20, 0.1);
   background: #fff;
   border-radius: 16px;
   transition: all 0.3s ease;
 }
 .feature-card:hover {
-  border-color: rgba(184, 134, 59, 0.4);
+  border-color: rgba(217, 30, 43, 0.4);
   transform: translateY(-3px);
 }
 
@@ -157,16 +157,16 @@ body {
   font-size: 14px;
   padding: 16px 24px;
   border-radius: 999px;
-  border: 1.5px solid var(--color-manzi-gold-light);
+  border: 1.5px solid rgba(20, 20, 20, 0.15);
   background: #fff;
   color: #2a2a2a;
   cursor: pointer;
   transition: 0.2s;
 }
 .pilar-tab.active {
-  background: rgba(184, 134, 59, 0.08);
-  border-color: var(--color-manzi-gold);
-  color: var(--color-manzi-ink);
+  background: rgba(217, 30, 43, 0.08);
+  border-color: var(--color-manzi-red);
+  color: var(--color-manzi-black);
 }
 .pilares-grid {
   grid-template-columns: 1fr;
@@ -181,7 +181,7 @@ body {
 .identidade-shield {
   clip-path: polygon(0 0, 100% 0, 100% 62%, 50% 100%, 0 62%);
   background: #fff;
-  border: 1.5px solid var(--color-manzi-gold-light);
+  border: 1.5px solid rgba(20, 20, 20, 0.15);
   color: #2a2a2a;
   cursor: pointer;
   transition: 0.2s;
@@ -189,9 +189,9 @@ body {
   text-align: center;
 }
 .identidade-shield.active {
-  background: rgba(184, 134, 59, 0.08);
-  border-color: var(--color-manzi-gold);
-  color: var(--color-manzi-ink);
+  background: rgba(217, 30, 43, 0.08);
+  border-color: var(--color-manzi-red);
+  color: var(--color-manzi-black);
 }
 .identidade-subitem {
   padding: 18px 20px;
@@ -201,8 +201,8 @@ body {
   transition: 0.2s;
 }
 .identidade-subitem.active {
-  border-left-color: var(--color-manzi-gold);
-  background: rgba(184, 134, 59, 0.08);
+  border-left-color: var(--color-manzi-red);
+  background: rgba(217, 30, 43, 0.08);
 }
 .identidade-acc-pill {
   display: flex;
@@ -211,7 +211,7 @@ body {
   width: 100%;
   text-align: left;
   background: #fff;
-  border: 1.5px solid var(--color-manzi-gold-light);
+  border: 1.5px solid rgba(20, 20, 20, 0.15);
   border-radius: 999px;
   padding: 14px 18px;
   cursor: pointer;
@@ -221,8 +221,8 @@ body {
   width: 26px;
   height: 26px;
   border-radius: 50%;
-  background: var(--color-manzi-gold-light);
-  color: var(--color-manzi-ink);
+  background: var(--color-manzi-white-2);
+  color: var(--color-manzi-black);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -240,39 +240,4 @@ body {
 }
 .marquee-pause:hover .marquee-track {
   animation-play-state: paused;
-}
-
-/* reservas: formulário multi-step */
-.step-circle {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 900;
-  font-size: 13px;
-  border: 1.5px solid rgba(28, 23, 18, 0.2);
-  color: rgba(28, 23, 18, 0.4);
-  transition: 0.3s;
-  flex-shrink: 0;
-}
-.form-step.active .step-circle {
-  background: linear-gradient(135deg, #1c1712, #2a2119);
-  border-color: #1c1712;
-  color: #fff;
-}
-.form-step.done .step-circle {
-  border-color: #1c1712;
-  color: #1c1712;
-}
-.step-line {
-  flex: 1;
-  height: 1.5px;
-  background: rgba(28, 23, 18, 0.15);
-  margin: 0 8px;
-  transition: 0.3s;
-}
-.step-line.done {
-  background: #1c1712;
 }

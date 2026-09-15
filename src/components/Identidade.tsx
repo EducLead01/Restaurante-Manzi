@@ -86,16 +86,16 @@ export default function Identidade() {
   const catAtiva = IDENTIDADE[catIdx];
 
   return (
-    <section id="identidade" className="py-24 bg-manzi-cream-2">
+    <section id="identidade" className="py-24 bg-manzi-white-2">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
           <h2
-            className="font-display font-bold text-manzi-ink"
+            className="font-display font-bold text-manzi-black"
             style={{ fontSize: "clamp(28px,4vw,44px)", lineHeight: 1.1 }}
           >
             Nossa Identidade
           </h2>
-          <p className="mt-4 text-manzi-ink/60" style={{ fontSize: 16 }}>
+          <p className="mt-4 text-manzi-black/60" style={{ fontSize: 16 }}>
             Nossa essência traduzida em uma equação.
           </p>
         </div>
@@ -117,7 +117,7 @@ export default function Identidade() {
                   <div className="mt-2">{cat.label}</div>
                 </button>
                 {i < IDENTIDADE.length - 1 && (
-                  <span className="font-black text-manzi-ink" style={{ fontSize: 24 }}>
+                  <span className="font-black text-manzi-black" style={{ fontSize: 24 }}>
                     {i === IDENTIDADE.length - 2 ? "=" : "+"}
                   </span>
                 )}
@@ -130,7 +130,7 @@ export default function Identidade() {
               className="rounded-2xl overflow-hidden"
               style={{
                 aspectRatio: "4/3",
-                background: "linear-gradient(135deg, #ece0cd 0%, #d9c4a3 100%)",
+                background: "linear-gradient(135deg, #f2f2f2 0%, #d9d9d9 100%)",
               }}
             />
             <div className="flex flex-col justify-center gap-2">
@@ -140,10 +140,10 @@ export default function Identidade() {
                   className={`identidade-subitem ${i === subIdx ? "active" : ""}`}
                   onClick={() => setSubIdx(i)}
                 >
-                  <h4 className="font-black text-manzi-ink" style={{ fontSize: 18 }}>
+                  <h4 className="font-black text-manzi-black" style={{ fontSize: 18 }}>
                     {it.titulo}
                   </h4>
-                  <p className="text-manzi-ink/70 mt-1.5" style={{ fontSize: 14, lineHeight: 1.6 }}>
+                  <p className="text-manzi-black/70 mt-1.5" style={{ fontSize: 14, lineHeight: 1.6 }}>
                     {it.texto}
                   </p>
                 </div>
@@ -157,15 +157,15 @@ export default function Identidade() {
           {IDENTIDADE.map((cat, i) => (
             <div key={cat.label}>
               {i > 0 && (
-                <div className="text-center font-black text-manzi-ink mb-1.5" style={{ fontSize: 20 }}>
+                <div className="text-center font-black text-manzi-black mb-1.5" style={{ fontSize: 20 }}>
                   {i === IDENTIDADE.length - 1 ? "=" : "+"}
                 </div>
               )}
               <button
-                className="identidade-acc-pill font-black text-sm text-manzi-ink"
+                className="identidade-acc-pill font-black text-sm text-manzi-black"
                 onClick={() => setOpenIdx(openIdx === i ? -1 : i)}
               >
-                <span className="text-manzi-wine flex">{cat.icone}</span>
+                <span className="text-manzi-marsala flex">{cat.icone}</span>
                 <span>{cat.label}</span>
                 <span className="identidade-acc-toggle">{openIdx === i ? "−" : "+"}</span>
               </button>
@@ -177,13 +177,13 @@ export default function Identidade() {
                       key={it.titulo}
                       className="rounded-2xl p-5"
                       style={{
-                        background: "linear-gradient(135deg, #ece0cd 0%, #d9c4a3 100%)",
+                        background: "linear-gradient(135deg, #f2f2f2 0%, #d9d9d9 100%)",
                       }}
                     >
-                      <h4 className="font-black text-manzi-ink" style={{ fontSize: 17 }}>
+                      <h4 className="font-black text-manzi-black" style={{ fontSize: 17 }}>
                         {it.titulo}
                       </h4>
-                      <p className="text-manzi-ink/70 mt-1.5" style={{ fontSize: 13, lineHeight: 1.5 }}>
+                      <p className="text-manzi-black/70 mt-1.5" style={{ fontSize: 13, lineHeight: 1.5 }}>
                         {it.texto}
                       </p>
                     </div>

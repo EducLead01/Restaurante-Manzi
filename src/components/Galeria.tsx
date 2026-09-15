@@ -1,5 +1,5 @@
-const TONS_A = ["#2a2119", "#1c1712", "#7a2331", "#4a1520", "#2a2119", "#1c1712", "#7a2331", "#4a1520"];
-const TONS_B = ["#b8863b", "#8a641f", "#5b6b4f", "#3d4a35", "#b8863b", "#8a641f", "#5b6b4f", "#3d4a35"];
+const TONS_A = ["#141414", "#1f1f1f", "#4a0e15", "#8c3a3d", "#141414", "#1f1f1f", "#4a0e15", "#8c3a3d"];
+const TONS_B = ["#d91e2b", "#a81824", "#8c3a3d", "#4a0e15", "#d91e2b", "#a81824", "#8c3a3d", "#4a0e15"];
 
 const WHATSAPP_NUMERO = "5562942630696";
 
@@ -17,7 +17,7 @@ function Coluna({ tons, className }: { tons: string[]; className: string }) {
 
 export default function Galeria() {
   return (
-    <section id="galeria" className="py-24 bg-manzi-cream-2">
+    <section id="galeria" className="py-24 bg-manzi-white-2">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* TODO: substituir os blocos de cor por fotos reais do restaurante */}

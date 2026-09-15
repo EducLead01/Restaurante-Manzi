@@ -3,28 +3,28 @@ const NOTICIAS = [
     tag: "Eventos",
     titulo: "Noite de degustação harmonizada com vinhos selecionados",
     texto: "Uma noite especial reunindo pratos autorais e rótulos escolhidos a dedo pela nossa equipe.",
-    gradient: "linear-gradient(135deg, #2a2119 0%, #1c1712 100%)",
+    gradient: "linear-gradient(135deg, #1f1f1f 0%, #141414 100%)",
   },
   {
     tag: "Cardápio",
     titulo: "Novos pratos chegam ao cardápio de inverno",
     texto: "Criações autorais pensadas para a estação, com ingredientes selecionados da safra atual.",
-    gradient: "linear-gradient(135deg, #7a2331 0%, #4a1520 100%)",
+    gradient: "linear-gradient(135deg, #8c3a3d 0%, #4a0e15 100%)",
   },
   {
     tag: "Reservas",
     titulo: "Reservas abertas para grupos e ocasiões especiais",
     texto: "Comemore datas importantes no Manzi — espaço reservado e atendimento personalizado.",
-    gradient: "linear-gradient(135deg, #b8863b 0%, #8a641f 100%)",
+    gradient: "linear-gradient(135deg, #d91e2b 0%, #a81824 100%)",
   },
 ];
 
 export default function Novidades() {
   return (
-    <section id="novidades" className="py-24 bg-manzi-cream">
+    <section id="novidades" className="py-24 bg-manzi-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-14 text-center">
-          <p className="text-manzi-gold text-xs font-bold uppercase tracking-[0.35em] mb-4">
+          <p className="text-manzi-red text-xs font-bold uppercase tracking-[0.35em] mb-4">
             Novidades
           </p>
           <h2
@@ -44,7 +44,7 @@ export default function Novidades() {
             >
               <div className="relative" style={{ aspectRatio: "4/3", background: n.gradient }} />
               <div className="p-6">
-                <p className="text-manzi-gold text-xs font-black uppercase tracking-widest mb-2">
+                <p className="text-manzi-red text-xs font-black uppercase tracking-widest mb-2">
                   {n.tag}
                 </p>
                 <h3 className="font-black" style={{ fontSize: 18, lineHeight: 1.3 }}>
@@ -53,7 +53,7 @@ export default function Novidades() {
                 <p className="text-black/60 font-light mt-3" style={{ fontSize: 14, lineHeight: 1.6 }}>
                   {n.texto}
                 </p>
-                <span className="inline-block mt-4 font-black text-xs uppercase tracking-wider text-manzi-ink">
+                <span className="inline-block mt-4 font-black text-xs uppercase tracking-wider text-manzi-black">
                   Ler mais →
                 </span>
               </div>

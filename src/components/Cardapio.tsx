@@ -2,26 +2,26 @@ const CATEGORIAS = [
   {
     nome: "Molhos e Temperos",
     desc: "Aquele toque especial no seu prato",
-    gradient: "linear-gradient(135deg, #7a2331 0%, #4a1520 100%)",
+    gradient: "linear-gradient(135deg, #8c3a3d 0%, #4a0e15 100%)",
   },
   {
     nome: "Porções Extras",
     desc: "Reforce seu pedido com mais acompanhamento",
-    gradient: "linear-gradient(135deg, #2a2119 0%, #1c1712 100%)",
+    gradient: "linear-gradient(135deg, #1f1f1f 0%, #141414 100%)",
   },
   {
     nome: "Bebidas",
     desc: "Para acompanhar sua refeição",
-    gradient: "linear-gradient(135deg, #b8863b 0%, #8a641f 100%)",
+    gradient: "linear-gradient(135deg, #d91e2b 0%, #a81824 100%)",
   },
 ];
 
 export default function Cardapio() {
   return (
-    <section id="cardapio" className="py-24 bg-manzi-cream-2">
+    <section id="cardapio" className="py-24 bg-manzi-white-2">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-14 text-center">
-          <p className="text-manzi-gold text-xs font-bold uppercase tracking-[0.35em] mb-4">
+          <p className="text-manzi-red text-xs font-bold uppercase tracking-[0.35em] mb-4">
             Cardápio
           </p>
           <h2
@@ -40,10 +40,10 @@ export default function Cardapio() {
               style={{ background: cat.gradient }}
             >
               <div>
-                <h3 className="font-display font-bold text-manzi-cream text-2xl mb-2">
+                <h3 className="font-display font-bold text-manzi-white text-2xl mb-2">
                   {cat.nome}
                 </h3>
-                <p className="text-manzi-cream/70 text-sm">{cat.desc}</p>
+                <p className="text-manzi-white/70 text-sm">{cat.desc}</p>
               </div>
             </div>
           ))}
@@ -52,8 +52,8 @@ export default function Cardapio() {
         <div className="text-center mt-12">
           <a
             href="#filosofia"
-            className="inline-flex font-bold text-xs uppercase tracking-wider px-8 py-4 rounded-full text-manzi-cream transition-opacity hover:opacity-90"
-            style={{ background: "linear-gradient(135deg, #1c1712, #2a2119)" }}
+            className="inline-flex font-bold text-xs uppercase tracking-wider px-8 py-4 rounded-full text-manzi-white transition-opacity hover:opacity-90"
+            style={{ background: "linear-gradient(135deg, #141414, #1f1f1f)" }}
           >
             Ver cardápio completo
           </a>

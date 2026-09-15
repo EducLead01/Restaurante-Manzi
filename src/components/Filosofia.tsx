@@ -67,15 +67,15 @@ function PainelFoto({ pilar }: { pilar: ItemCardapio }) {
     <div>
       <div
         className="rounded-2xl p-6 md:p-8"
-        style={{ background: "#fff", border: "1.5px solid var(--color-manzi-gold-light)" }}
+        style={{ background: "#fff", border: "1.5px solid rgba(20,20,20,0.15)" }}
       >
         <h3
-          className="font-display font-black text-manzi-ink"
+          className="font-display font-black text-manzi-black"
           style={{ fontSize: "clamp(22px,2.6vw,30px)", lineHeight: 1.15 }}
         >
           {pilar.titulo}
         </h3>
-        <p className="mt-3 text-manzi-ink/75" style={{ fontSize: 15, lineHeight: 1.7 }}>
+        <p className="mt-3 text-manzi-black/75" style={{ fontSize: 15, lineHeight: 1.7 }}>
           {pilar.texto}
         </p>
         <div className="mt-6">
@@ -114,19 +114,19 @@ function PainelTexto({ pilar }: { pilar: ItemCardapio }) {
       >
         <path
           d="M40,0 L386,0 Q400,0 400,14 L400,186 Q400,200 386,200 L40,200 L0,100 Z"
-          fill="var(--color-manzi-cream)"
-          stroke="var(--color-manzi-gold-light)"
+          fill="var(--color-manzi-white)"
+          stroke="rgba(20,20,20,0.15)"
           strokeWidth={2.5}
         />
       </svg>
       <div style={{ position: "relative", zIndex: 10, padding: "44px 40px 44px 68px" }}>
         <h3
-          className="font-display font-black text-manzi-ink"
+          className="font-display font-black text-manzi-black"
           style={{ fontSize: "clamp(22px,2.6vw,30px)", lineHeight: 1.15 }}
         >
           {pilar.titulo}
         </h3>
-        <p className="mt-4 text-manzi-ink/75" style={{ fontSize: 15, lineHeight: 1.7, maxWidth: 520 }}>
+        <p className="mt-4 text-manzi-black/75" style={{ fontSize: 15, lineHeight: 1.7, maxWidth: 520 }}>
           {pilar.texto}
         </p>
         <div className="mt-8">
@@ -146,16 +146,16 @@ export default function Filosofia() {
   const [openIdx, setOpenIdx] = useState(0);
 
   return (
-    <section id="filosofia" className="pt-36 pb-24 bg-manzi-cream">
+    <section id="filosofia" className="pt-36 pb-24 bg-manzi-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
           <h2
-            className="font-display font-bold text-manzi-ink"
+            className="font-display font-bold text-manzi-black"
             style={{ fontSize: "clamp(28px,4vw,44px)", lineHeight: 1.1 }}
           >
             Nosso Cardápio
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-manzi-ink/60" style={{ fontSize: 16, lineHeight: 1.6 }}>
+          <p className="mt-4 max-w-2xl mx-auto text-manzi-black/60" style={{ fontSize: 16, lineHeight: 1.6 }}>
             Os pilares que guiam cada prato que sai da nossa cozinha.
           </p>
         </div>
