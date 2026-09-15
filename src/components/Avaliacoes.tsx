@@ -8,29 +8,24 @@ const NOTA = 4.8;
 const TOTAL_AVALIACOES = 0; // placeholder
 const GOOGLE_MAPS_URL = "#"; // TODO: link do perfil do Manzi no Google Maps
 
-const DEPOIMENTOS = [
-  {
-    nome: "[Nome do cliente]",
-    texto: "[Depoimento real do Google vai aparecer aqui após a integração.]",
-  },
-  {
-    nome: "[Nome do cliente]",
-    texto: "[Depoimento real do Google vai aparecer aqui após a integração.]",
-  },
-  {
-    nome: "[Nome do cliente]",
-    texto: "[Depoimento real do Google vai aparecer aqui após a integração.]",
-  },
+const DEPOIMENTOS_BASE = [
+  { nome: "[Nome do cliente]", texto: "[Depoimento real do Google vai aparecer aqui após a integração.]" },
+  { nome: "[Nome do cliente]", texto: "[Depoimento real do Google vai aparecer aqui após a integração.]" },
+  { nome: "[Nome do cliente]", texto: "[Depoimento real do Google vai aparecer aqui após a integração.]" },
+  { nome: "[Nome do cliente]", texto: "[Depoimento real do Google vai aparecer aqui após a integração.]" },
 ];
 
-function Estrelas({ nota }: { nota: number }) {
+const COLUNA_A = [...DEPOIMENTOS_BASE, ...DEPOIMENTOS_BASE];
+const COLUNA_B = [...DEPOIMENTOS_BASE.slice().reverse(), ...DEPOIMENTOS_BASE.slice().reverse()];
+
+function Estrelas({ nota, size = 20 }: { nota: number; size?: number }) {
   return (
     <div className="flex gap-1" aria-label={`Nota ${nota} de 5`}>
       {[1, 2, 3, 4, 5].map((i) => (
         <svg
           key={i}
-          width="20"
-          height="20"
+          width={size}
+          height={size}
           viewBox="0 0 24 24"
           fill={i <= Math.round(nota) ? "var(--color-manzi-red)" : "none"}
           stroke="var(--color-manzi-red)"
@@ -43,53 +38,79 @@ function Estrelas({ nota }: { nota: number }) {
   );
 }
 
+function CartaoDepoimento({ nome, texto }: { nome: string; texto: string }) {
+  return (
+    <div
+      className="w-full rounded-xl p-5 bg-manzi-white flex-shrink-0"
+      style={{ height: 200, border: "1px solid rgba(61,7,19,0.1)" }}
+    >
+      <Estrelas nota={5} size={16} />
+      <p className="text-manzi-black/75 mt-3" style={{ fontSize: 13, lineHeight: 1.5 }}>
+        {texto}
+      </p>
+      <p className="font-bold text-manzi-black mt-3" style={{ fontSize: 12 }}>
+        {nome}
+      </p>
+    </div>
+  );
+}
+
+function Coluna({
+  itens,
+  className,
+}: {
+  itens: typeof DEPOIMENTOS_BASE;
+  className: string;
+}) {
+  return (
+    <div className="flex-1 overflow-hidden">
+      <div className={`${className} flex flex-col gap-3`}>
+        {itens.map((d, i) => (
+          <CartaoDepoimento key={i} nome={d.nome} texto={d.texto} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function Avaliacoes() {
   return (
     <section id="avaliacoes" className="py-24 bg-manzi-white-2">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-14">
-          <p className="text-manzi-red text-xs font-bold uppercase tracking-[0.35em] mb-4">
-            Avaliações
-          </p>
-          <h2
-            className="font-display font-bold"
-            style={{ fontSize: "clamp(28px,4vw,44px)", lineHeight: 1.1 }}
-          >
-            O que dizem sobre o Manzi
-          </h2>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="flex gap-4 overflow-hidden rounded-2xl" style={{ height: 480 }} aria-hidden="true">
+            <Coluna itens={COLUNA_A} className="track-up" />
+            <Coluna itens={COLUNA_B} className="track-down" />
+          </div>
 
-          <div className="flex flex-col items-center gap-2 mt-6">
-            <Estrelas nota={NOTA} />
-            <p className="text-manzi-black/70 text-sm">
-              {NOTA} de 5 · {TOTAL_AVALIACOES} avaliações no Google
+          <div>
+            <p className="text-manzi-red text-xs font-bold uppercase tracking-[0.35em] mb-4">
+              Avaliações
             </p>
+            <h2
+              className="font-display font-bold mb-6"
+              style={{ fontSize: "clamp(32px,4vw,48px)", lineHeight: 1.1 }}
+            >
+              O que dizem sobre o Manzi
+            </h2>
+
+            <div className="flex items-center gap-3 mb-4">
+              <Estrelas nota={NOTA} />
+              <span className="text-manzi-black/70 text-sm">
+                {NOTA} de 5 · {TOTAL_AVALIACOES} avaliações no Google
+              </span>
+            </div>
+
             <a
               href={GOOGLE_MAPS_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 font-bold text-xs uppercase tracking-wider text-manzi-black underline underline-offset-4"
+              className="inline-flex items-center justify-center gap-2 font-black text-sm px-7 py-4 rounded-xl text-white transition-opacity hover:opacity-90"
+              style={{ background: "var(--color-manzi-red)" }}
             >
               Ver todas as avaliações no Google
             </a>
           </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {DEPOIMENTOS.map((d, i) => (
-            <div
-              key={i}
-              className="rounded-2xl p-6 bg-manzi-white"
-              style={{ border: "1px solid rgba(61,7,19,0.1)" }}
-            >
-              <Estrelas nota={5} />
-              <p className="text-manzi-black/75 mt-4" style={{ fontSize: 14, lineHeight: 1.6 }}>
-                {d.texto}
-              </p>
-              <p className="font-bold text-manzi-black mt-4" style={{ fontSize: 13 }}>
-                {d.nome}
-              </p>
-            </div>
-          ))}
         </div>
       </div>
     </section>
