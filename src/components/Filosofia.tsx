@@ -75,7 +75,7 @@ function PainelFoto({ pilar }: { pilar: ItemCardapio }) {
         style={{ background: "var(--color-manzi-white)", border: "1.5px solid rgba(61,7,19,0.15)" }}
       >
         <h3
-          className="font-display font-black text-manzi-black"
+          className="font-display font-black text-manzi-red"
           style={{ fontSize: "clamp(22px,2.6vw,30px)", lineHeight: 1.15 }}
         >
           {pilar.titulo}
