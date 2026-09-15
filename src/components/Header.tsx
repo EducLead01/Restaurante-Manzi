@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 const WHATSAPP_NUMERO = "5562942630696";
@@ -29,8 +30,11 @@ export default function Header() {
             ))}
           </nav>
 
-          <a href="#" className="font-[family-name:var(--font-brand)] text-2xl tracking-wide text-manzi-black justify-self-center">
-            MANZI
+          <a href="#" className="flex items-center gap-2 justify-self-center">
+            <Image src="/logo-icon.png" alt="" width={34} height={46} className="h-9 w-auto" />
+            <span className="font-[family-name:var(--font-brand)] text-2xl tracking-wide text-manzi-black">
+              MANZI
+            </span>
           </a>
 
           <div className="flex items-center justify-end">

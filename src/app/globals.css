@@ -2,7 +2,7 @@
 
 :root {
   --background: #f3e6d4;
-  --foreground: #3d0713;
+  --foreground: #5d0018;
 }
 
 @theme inline {
@@ -14,8 +14,8 @@
 
   --color-manzi-white: #f3e6d4;
   --color-manzi-white-2: #ead8b8;
-  --color-manzi-black: #3d0713;
-  --color-manzi-black-2: #5d0018;
+  --color-manzi-black: #5d0018;
+  --color-manzi-black-2: #3d0713;
   --color-manzi-red: #d91e2b;
   --color-manzi-red-light: #f4c7ca;
   --color-manzi-marsala: #8c3a3d;
