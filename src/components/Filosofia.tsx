@@ -34,6 +34,11 @@ const PILARES: ItemCardapio[] = [
       "Arroz soltinho, feijão de caldo, saladinha fresca, farofinha de frango da casa e acompanhamentos do dia.",
   },
   {
+    titulo: "Costelinha Suína",
+    texto:
+      "Arroz soltinho, feijão de caldo, saladinha fresca, farofinha de carne suína da casa e acompanhamentos do dia.",
+  },
+  {
     titulo: "Prato do Dia",
     texto:
       "[Descrição: opção que muda diariamente — combine com o cardápio da semana.]",
