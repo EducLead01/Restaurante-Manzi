@@ -80,7 +80,7 @@ function PainelFoto({ pilar }: { pilar: ItemCardapio }) {
         >
           {pilar.titulo}
         </h3>
-        <p className="mt-3 text-manzi-black/75" style={{ fontSize: 15, lineHeight: 1.7 }}>
+        <p className="mt-3" style={{ fontSize: 15, lineHeight: 1.7, color: "#0A0F2E" }}>
           {pilar.texto}
         </p>
         <div className="mt-6">
@@ -131,7 +131,7 @@ function PainelTexto({ pilar }: { pilar: ItemCardapio }) {
         >
           {pilar.titulo}
         </h3>
-        <p className="mt-4 text-manzi-black/75" style={{ fontSize: 15, lineHeight: 1.7, maxWidth: 520 }}>
+        <p className="mt-4" style={{ fontSize: 15, lineHeight: 1.7, maxWidth: 520, color: "#0A0F2E" }}>
           {pilar.texto}
         </p>
         <div className="mt-8">
