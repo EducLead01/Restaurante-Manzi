@@ -1,19 +1,18 @@
 const ITENS = [
   {
     cor: "var(--color-manzi-red)",
-    titulo: "Carnes selecionadas",
-    texto: "Cortes nobres, maturados e preparados no ponto certo.",
+    titulo: "Molho da Casa",
+    texto: "Receita exclusiva, o toque especial de cada prato.",
     icone: (
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
-        <path d="M22 10 12 5 2 10l10 5 10-5Z" />
-        <path d="M6 12v5c0 1.1 2.7 2 6 2s6-.9 6-2v-5" />
+        <path d="M12 2s6 7 6 12a6 6 0 0 1-12 0c0-5 6-12 6-12Z" />
       </svg>
     ),
   },
   {
     cor: "var(--color-manzi-marsala)",
-    titulo: "Brasa lenta",
-    texto: "Técnica e paciência para realçar cada sabor.",
+    titulo: "Molho Barbecue",
+    texto: "Agridoce e defumado, perfeito com carnes na brasa.",
     icone: (
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 2c1 3-2 4-2 7a4 4 0 0 0 8 0c0-1.5-.8-2.5-1.5-3.5" />
@@ -23,25 +22,23 @@ const ITENS = [
   },
   {
     cor: "var(--color-manzi-black)",
-    titulo: "Ambiente aconchegante",
-    texto: "Espaço pensado para momentos em boa companhia.",
+    titulo: "Farofa Especial",
+    texto: "Crocante e feita na hora, para completar o prato.",
     icone: (
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
-        <path d="M3 9.5 12 3l9 6.5" />
-        <path d="M5 10v10h14V10" />
+        <path d="M4 11h16l-1.5 8.5a2 2 0 0 1-2 1.5H7.5a2 2 0 0 1-2-1.5Z" />
+        <path d="M8 11V8a4 4 0 0 1 8 0v3" />
       </svg>
     ),
   },
   {
     cor: "var(--color-manzi-bordo)",
-    titulo: "Carta de vinhos",
-    texto: "Rótulos selecionados para harmonizar cada prato.",
+    titulo: "Porção Extra",
+    texto: "Reforce seu pedido com mais acompanhamento.",
     icone: (
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
-        <path d="M8 2h8" />
-        <path d="M7 2c0 5 0 7 2.5 9S12 13 12 17v5" />
-        <path d="M17 2c0 5 0 7-2.5 9" />
-        <path d="M8 22h8" />
+        <circle cx="12" cy="12" r="9" />
+        <path d="M12 8v8M8 12h8" />
       </svg>
     ),
   },
@@ -80,7 +77,7 @@ export default function Diferenciais() {
     <section id="diferenciais" className="py-20 overflow-hidden bg-manzi-white marquee-pause">
       <div className="text-center mb-14 px-4">
         <p className="text-manzi-red text-xs font-bold uppercase tracking-[0.35em] mb-4">
-          Diferenciais
+          Molhos e Adicionais
         </p>
         <h2 className="font-display font-bold" style={{ fontSize: "clamp(28px,4vw,44px)", lineHeight: 1.1 }}>
           Conheça nossos molhos e adicionais
