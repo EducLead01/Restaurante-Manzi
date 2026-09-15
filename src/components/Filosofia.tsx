@@ -67,7 +67,7 @@ function PainelFoto({ pilar }: { pilar: ItemCardapio }) {
     <div>
       <div
         className="rounded-2xl p-6 md:p-8"
-        style={{ background: "#fff", border: "1.5px solid rgba(20,20,20,0.15)" }}
+        style={{ background: "var(--color-manzi-white)", border: "1.5px solid rgba(61,7,19,0.15)" }}
       >
         <h3
           className="font-display font-black text-manzi-black"
@@ -115,7 +115,7 @@ function PainelTexto({ pilar }: { pilar: ItemCardapio }) {
         <path
           d="M40,0 L386,0 Q400,0 400,14 L400,186 Q400,200 386,200 L40,200 L0,100 Z"
           fill="var(--color-manzi-white)"
-          stroke="rgba(20,20,20,0.15)"
+          stroke="rgba(61,7,19,0.15)"
           strokeWidth={2.5}
         />
       </svg>

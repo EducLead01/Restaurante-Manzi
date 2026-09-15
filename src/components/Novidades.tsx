@@ -3,7 +3,7 @@ const NOTICIAS = [
     tag: "Eventos",
     titulo: "Noite de degustação harmonizada com vinhos selecionados",
     texto: "Uma noite especial reunindo pratos autorais e rótulos escolhidos a dedo pela nossa equipe.",
-    gradient: "linear-gradient(135deg, #1f1f1f 0%, #141414 100%)",
+    gradient: "linear-gradient(135deg, #5D0018 0%, #3D0713 100%)",
   },
   {
     tag: "Cardápio",

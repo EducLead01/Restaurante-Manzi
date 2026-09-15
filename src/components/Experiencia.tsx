@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 // TODO: substituir os gradientes pelos slides reais (fotos do salão, pratos, eventos)
 const SLIDES = [
-  { legenda: "Salão principal", gradient: "linear-gradient(135deg, #1f1f1f 0%, #141414 100%)" },
+  { legenda: "Salão principal", gradient: "linear-gradient(135deg, #5D0018 0%, #3D0713 100%)" },
   { legenda: "Prato assinatura", gradient: "linear-gradient(135deg, #8c3a3d 0%, #4a0e15 100%)" },
   { legenda: "Adega", gradient: "linear-gradient(135deg, #d91e2b 0%, #a81824 100%)" },
 ];
@@ -89,7 +89,7 @@ export default function Experiencia() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative" style={{ marginTop: -36, zIndex: 20 }}>
         <div
           className="grid grid-cols-1 sm:grid-cols-3 rounded-2xl overflow-hidden bg-manzi-white"
-          style={{ border: "1px solid rgba(20,20,20,0.1)" }}
+          style={{ border: "1px solid rgba(61,7,19,0.1)" }}
         >
           {STATS.map((stat, i) => (
             <div

@@ -130,7 +130,7 @@ export default function Identidade() {
               className="rounded-2xl overflow-hidden"
               style={{
                 aspectRatio: "4/3",
-                background: "linear-gradient(135deg, #f2f2f2 0%, #d9d9d9 100%)",
+                background: "linear-gradient(135deg, #ead8b8 0%, #d4bd94 100%)",
               }}
             />
             <div className="flex flex-col justify-center gap-2">
@@ -177,7 +177,7 @@ export default function Identidade() {
                       key={it.titulo}
                       className="rounded-2xl p-5"
                       style={{
-                        background: "linear-gradient(135deg, #f2f2f2 0%, #d9d9d9 100%)",
+                        background: "linear-gradient(135deg, #ead8b8 0%, #d4bd94 100%)",
                       }}
                     >
                       <h4 className="font-black text-manzi-black" style={{ fontSize: 17 }}>

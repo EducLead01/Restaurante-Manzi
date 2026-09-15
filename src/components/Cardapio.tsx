@@ -7,7 +7,7 @@ const CATEGORIAS = [
   {
     nome: "Porções Extras",
     desc: "Reforce seu pedido com mais acompanhamento",
-    gradient: "linear-gradient(135deg, #1f1f1f 0%, #141414 100%)",
+    gradient: "linear-gradient(135deg, #5D0018 0%, #3D0713 100%)",
   },
   {
     nome: "Bebidas",
@@ -53,7 +53,7 @@ export default function Cardapio() {
           <a
             href="#filosofia"
             className="inline-flex font-bold text-xs uppercase tracking-wider px-8 py-4 rounded-full text-manzi-white transition-opacity hover:opacity-90"
-            style={{ background: "linear-gradient(135deg, #141414, #1f1f1f)" }}
+            style={{ background: "linear-gradient(135deg, #3D0713, #5D0018)" }}
           >
             Ver cardápio completo
           </a>
