@@ -10,6 +10,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter);
   --font-display: var(--font-playfair);
+  --font-brand: var(--font-anton);
 
   --color-manzi-white: #ffffff;
   --color-manzi-white-2: #f2f2f2;
