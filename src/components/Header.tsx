@@ -22,12 +22,8 @@ export default function Header() {
   return (
     <header className="fixed top-0 w-full z-50 bg-manzi-white/95 backdrop-blur-sm border-b border-black/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-18" style={{ height: 72 }}>
-          <a href="#" className="font-[family-name:var(--font-brand)] text-2xl tracking-wide text-manzi-black">
-            MANZI
-          </a>
-
-          <nav className="hidden md:flex items-center gap-8 text-xs font-bold uppercase tracking-wider">
+        <div className="grid grid-cols-[1fr_auto_1fr] items-center" style={{ height: 72 }}>
+          <nav className="hidden md:flex items-center gap-6 text-xs font-bold uppercase tracking-wider justify-start">
             {LINKS.map((link) => (
               <a key={link.href} href={link.href} className="nav-link">
                 {link.label}
@@ -35,29 +31,35 @@ export default function Header() {
             ))}
           </nav>
 
-          <a
-            href={WHATSAPP_HREF}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden md:inline-flex items-center font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-full text-white transition-opacity hover:opacity-90"
-            style={{ background: "#25D366" }}
-          >
-            Peça pelo WhatsApp
+          <a href="#" className="font-[family-name:var(--font-brand)] text-2xl tracking-wide text-manzi-black justify-self-center">
+            MANZI
           </a>
 
-          <button
-            aria-label="Abrir menu"
-            className="md:hidden text-manzi-black"
-            onClick={() => setOpen((v) => !v)}
-          >
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              {open ? (
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
+          <div className="flex items-center justify-end">
+            <a
+              href={WHATSAPP_HREF}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden md:inline-flex items-center font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-full text-white transition-opacity hover:opacity-90"
+              style={{ background: "#25D366" }}
+            >
+              Peça pelo WhatsApp
+            </a>
+
+            <button
+              aria-label="Abrir menu"
+              className="md:hidden text-manzi-black"
+              onClick={() => setOpen((v) => !v)}
+            >
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                {open ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
 
