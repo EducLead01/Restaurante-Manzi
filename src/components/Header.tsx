@@ -11,7 +11,6 @@ const LINKS = [
   { href: "#filosofia", label: "Nosso Cardápio" },
   { href: "#identidade", label: "Nossa Identidade" },
   { href: "#cardapio", label: "Adicionais" },
-  { href: "#novidades", label: "Novidades" },
   { href: "#galeria", label: "Localização" },
   { href: "#diferenciais", label: "Por que Manzi" },
 ];
