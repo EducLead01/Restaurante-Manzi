@@ -23,7 +23,7 @@ export default function Header() {
     <header className="fixed top-0 w-full z-50 bg-manzi-white/95 backdrop-blur-sm border-b border-black/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-[1fr_auto_1fr] items-center" style={{ height: 72 }}>
-          <nav className="hidden md:flex items-center gap-6 text-xs font-bold uppercase tracking-wider justify-start">
+          <nav className="col-start-1 hidden md:flex items-center gap-6 text-xs font-bold uppercase tracking-wider justify-start">
             {LINKS.map((link) => (
               <a key={link.href} href={link.href} className="nav-link">
                 {link.label}
@@ -31,14 +31,14 @@ export default function Header() {
             ))}
           </nav>
 
-          <a href="#" className="flex items-center gap-2 justify-self-center">
+          <a href="#" className="col-start-2 flex items-center gap-2 justify-self-center">
             <Image src="/logo-icon.png" alt="" width={34} height={46} className="h-9 w-auto" />
             <span className="font-[family-name:var(--font-brand)] text-2xl tracking-wide text-manzi-black">
               MANZI
             </span>
           </a>
 
-          <div className="flex items-center justify-end">
+          <div className="col-start-3 flex items-center justify-end">
             <a
               href={WHATSAPP_HREF}
               target="_blank"
