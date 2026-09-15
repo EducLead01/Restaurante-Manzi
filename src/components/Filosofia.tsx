@@ -15,23 +15,23 @@ const PILARES: ItemCardapio[] = [
   {
     titulo: "Executivo de Bife Bovino",
     texto:
-      "Arroz soltinho, feijão de caldo, saladinha fresca, farofinha de carne da casa e legumes do dia.",
+      "Arroz soltinho, feijão de caldo, saladinha fresca, farofinha de carne da casa e acompanhamentos do dia.",
     imagem: "/cardapio/executivo-bife-bovino.webp",
   },
   {
     titulo: "Carne de Panela",
     texto:
-      "[Descrição do prato: modo de preparo, acompanhamentos.]",
+      "Arroz soltinho, feijão de caldo, saladinha fresca, farofinha de carne da casa e acompanhamentos do dia.",
   },
   {
     titulo: "Filé de Frango Grelhado",
     texto:
-      "[Descrição do prato: tempero, acompanhamentos.]",
+      "Arroz soltinho, feijão de caldo, saladinha fresca, farofinha de frango da casa e acompanhamentos do dia.",
   },
   {
     titulo: "Strogonoff de Frango",
     texto:
-      "[Descrição do prato: acompanhamentos, porção.]",
+      "Arroz soltinho, feijão de caldo, saladinha fresca, farofinha de frango da casa e acompanhamentos do dia.",
   },
   {
     titulo: "Prato do Dia",
