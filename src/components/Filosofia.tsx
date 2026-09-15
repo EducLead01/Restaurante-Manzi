@@ -160,9 +160,6 @@ export default function Filosofia() {
           >
             Nosso Cardápio
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-manzi-black/60" style={{ fontSize: 16, lineHeight: 1.6 }}>
-            Os pilares que guiam cada prato que sai da nossa cozinha.
-          </p>
         </div>
 
         {/* Desktop: tabs + painel fixo ao lado */}
