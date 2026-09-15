@@ -1,5 +1,5 @@
 const TONS_A = ["#3D0713", "#5D0018", "#4a0e15", "#8c3a3d", "#3D0713", "#5D0018", "#4a0e15", "#8c3a3d"];
-const TONS_B = ["#d91e2b", "#a81824", "#8c3a3d", "#4a0e15", "#d91e2b", "#a81824", "#8c3a3d", "#4a0e15"];
+const TONS_B = ["#ea1d2c", "#a81824", "#8c3a3d", "#4a0e15", "#ea1d2c", "#a81824", "#8c3a3d", "#4a0e15"];
 
 const WHATSAPP_NUMERO = "5562942630696";
 

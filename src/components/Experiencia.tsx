@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 const SLIDES = [
   { legenda: "Salão principal", gradient: "linear-gradient(135deg, #5D0018 0%, #3D0713 100%)" },
   { legenda: "Prato assinatura", gradient: "linear-gradient(135deg, #8c3a3d 0%, #4a0e15 100%)" },
-  { legenda: "Adega", gradient: "linear-gradient(135deg, #d91e2b 0%, #a81824 100%)" },
+  { legenda: "Adega", gradient: "linear-gradient(135deg, #ea1d2c 0%, #a81824 100%)" },
 ];
 
 const STATS = [
