@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f3e6d4;
+  --background: #f5efe7;
   --foreground: #5d0018;
 }
 
@@ -12,8 +12,8 @@
   --font-display: var(--font-fredoka);
   --font-brand: var(--font-fredoka);
 
-  --color-manzi-white: #f3e6d4;
-  --color-manzi-white-2: #ead8b8;
+  --color-manzi-white: #f5efe7;
+  --color-manzi-white-2: #ece0cc;
   --color-manzi-black: #5d0018;
   --color-manzi-black-2: #3d0713;
   --color-manzi-red: #d91e2b;
