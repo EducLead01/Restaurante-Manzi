@@ -110,6 +110,17 @@ export default function Avaliacoes() {
             >
               Ver todas as avaliações no Google
             </a>
+
+            <h3
+              className="font-display font-bold mt-12 mb-4"
+              style={{ fontSize: "clamp(24px,3vw,32px)", lineHeight: 1.1 }}
+            >
+              Onde estamos.
+            </h3>
+            <p className="text-manzi-black/70 font-light leading-relaxed" style={{ fontSize: 16 }}>
+              Av. Bernardo Sayão, Nº 2159 - Setor Centro Oeste, ao lado do posto Fama, esquina
+              da Av. Bernardo Sayão e Av. Marechal Rondon Goiânia - GO, 74550-020
+            </p>
           </div>
         </div>
       </div>
