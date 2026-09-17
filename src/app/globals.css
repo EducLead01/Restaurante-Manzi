@@ -165,8 +165,8 @@ body {
   transition: 0.2s;
 }
 .pilar-tab.active {
-  background: rgba(234, 29, 44, 0.08);
-  border-color: var(--color-manzi-red);
+  background: rgba(93, 0, 24, 0.08);
+  border-color: var(--color-manzi-black);
   color: var(--color-manzi-red);
 }
 .pilares-grid {
