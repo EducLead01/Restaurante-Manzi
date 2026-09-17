@@ -31,11 +31,14 @@ export default function Header() {
             ))}
           </nav>
 
-          <a href="#" className="col-start-2 flex items-center gap-2 justify-self-center">
-            <Image src="/logo-icon.png" alt="" width={34} height={46} className="h-9 w-auto" />
-            <span className="font-[family-name:var(--font-brand)] text-2xl tracking-wide text-manzi-black">
-              MANZI
-            </span>
+          <a href="#" className="col-start-2 flex items-center justify-self-center">
+            <Image
+              src="/InstaAvatarV2@2x.png"
+              alt="Manzi"
+              width={2160}
+              height={2160}
+              className="h-12 w-12 rounded-full"
+            />
           </a>
 
           <div className="col-start-3 flex items-center justify-end">
