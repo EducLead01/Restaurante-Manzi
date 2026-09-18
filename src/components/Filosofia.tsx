@@ -15,38 +15,38 @@ const PILARES: ItemCardapio[] = [
   {
     titulo: "Executivo de Bife Bovino",
     texto:
-      "Arroz soltinho, feijão de caldo, saladinha fresca, farofinha de carne da casa e acompanhamentos do dia.",
+      "Executivo completo: arroz soltinho, feijão de caldo, saladinha fresca, farofinha de carne da casa e acompanhamentos do dia.",
     imagem: "/cardapio/executivo-bife-bovino.webp",
   },
   {
-    titulo: "Carne de Panela",
+    titulo: "Executivo de Carne de Panela",
     texto:
-      "Arroz soltinho, feijão de caldo, saladinha fresca, farofinha de carne da casa e acompanhamentos do dia.",
+      "Executivo completo: arroz soltinho, feijão de caldo, saladinha fresca, farofinha de carne da casa e acompanhamentos do dia.",
   },
   {
-    titulo: "Filé de Frango Grelhado",
+    titulo: "Executivo de Filé de Frango Grelhado",
     texto:
-      "Arroz soltinho, feijão de caldo, saladinha fresca, farofinha de frango da casa e acompanhamentos do dia.",
+      "Executivo completo: arroz soltinho, feijão de caldo, saladinha fresca, farofinha de frango da casa e acompanhamentos do dia.",
   },
   {
-    titulo: "Strogonoff de Frango",
+    titulo: "Executivo de Strogonoff de Frango",
     texto:
-      "Arroz soltinho, feijão de caldo, saladinha fresca, farofinha de frango da casa e acompanhamentos do dia.",
+      "Executivo completo: arroz soltinho, feijão de caldo, saladinha fresca, farofinha de frango da casa e acompanhamentos do dia.",
   },
   {
-    titulo: "Costelinha Suína",
+    titulo: "Executivo de Costelinha Suína",
     texto:
-      "Arroz soltinho, feijão de caldo, saladinha fresca, farofinha de carne suína da casa e acompanhamentos do dia.",
+      "Executivo completo: arroz soltinho, feijão de caldo, saladinha fresca, farofinha de carne suína da casa e acompanhamentos do dia.",
   },
   {
-    titulo: "Prato do Dia",
+    titulo: "Executivo do Dia",
     texto:
-      "[Descrição: opção que muda diariamente — combine com o cardápio da semana.]",
+      "[Descrição: executivo que muda diariamente — combine com o cardápio da semana.]",
   },
   {
     titulo: "Tele Entregas",
     texto:
-      "Peça pelo telefone ou WhatsApp e receba em casa — entrega grátis em um raio de até 3km do restaurante.",
+      "Peça seu executivo pelo telefone ou WhatsApp e receba em casa — entrega grátis em um raio de até 3km do restaurante.",
   },
 ];
 
