@@ -160,14 +160,14 @@ body {
   border-radius: 999px;
   border: 1.5px solid rgba(61, 7, 19, 0.15);
   background: var(--color-manzi-white);
-  color: var(--color-manzi-red);
+  color: var(--color-manzi-black);
   cursor: pointer;
   transition: 0.2s;
 }
 .pilar-tab.active {
   background: rgba(93, 0, 24, 0.08);
   border-color: var(--color-manzi-black);
-  color: var(--color-manzi-red);
+  color: var(--color-manzi-black);
 }
 .pilares-grid {
   grid-template-columns: 1fr;
