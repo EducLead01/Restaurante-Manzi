@@ -11,7 +11,6 @@ const WHATSAPP_HREF = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponen
 const LINKS = [
   { href: "#filosofia", label: "Nosso Cardápio" },
   { href: "#avaliacoes", label: "Avaliações" },
-  { href: "#galeria", label: "Localização" },
   { href: "#diferenciais", label: "Molhos e Adicionais" },
 ];
 
