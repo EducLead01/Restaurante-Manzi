@@ -17,8 +17,8 @@ const SLIDES = [
 
 const STATS = [
   { valor: "4.9★", texto: "Avaliação média dos clientes" },
-  { valor: "10+", texto: "Anos de tradição em alta gastronomia" },
-  { valor: "100%", texto: "Ingredientes selecionados diariamente" },
+  { valor: "2+", texto: "Anos no mesmo endereço" },
+  { valor: "100%", texto: "Ingredientes frescos e selecionados diariamente" },
 ];
 
 export default function Experiencia() {
