@@ -222,8 +222,8 @@ body {
   width: 26px;
   height: 26px;
   border-radius: 50%;
-  background: var(--color-manzi-white-2);
-  color: var(--color-manzi-black);
+  background: var(--color-manzi-black);
+  color: var(--color-manzi-white);
   display: flex;
   align-items: center;
   justify-content: center;
