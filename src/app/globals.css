@@ -66,29 +66,128 @@ body {
   transform: translateY(-3px);
 }
 
-/* card flip (diferenciais) */
-.flip-card {
+/* diferenciais: badge recortado + flip por clique + barra de arrastar */
+.diferenciais-flip {
   perspective: 1200px;
+  height: 260px;
+  width: 280px;
+  cursor: pointer;
 }
-.flip-card-inner {
+.diferenciais-flip-inner {
   position: relative;
   width: 100%;
   height: 100%;
   transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
   transform-style: preserve-3d;
 }
-.flip-card:hover .flip-card-inner {
+.diferenciais-flip.is-open .diferenciais-flip-inner {
   transform: rotateY(180deg);
 }
-.flip-card-face {
+.diferenciais-flip:focus-visible {
+  outline: 2px solid var(--color-manzi-red);
+  outline-offset: 4px;
+  border-radius: 18px;
+}
+.diferenciais-card,
+.diferenciais-card-back {
   position: absolute;
   inset: 0;
   border-radius: 18px;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
-.flip-card-back {
+.diferenciais-card {
+  background: #fff;
+  padding: 32px 20px 28px;
+  text-align: center;
+}
+.diferenciais-card-back {
   transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 24px;
+  text-align: center;
+}
+.diferenciais-badge {
+  position: relative;
+  width: 92px;
+  height: 92px;
+  margin: 0 auto;
+}
+.diferenciais-badge-main {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+}
+.diferenciais-badge-bite {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #fff;
+  top: -5px;
+  right: -5px;
+  z-index: 2;
+}
+.diferenciais-badge-inner {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #fff;
+  top: 52%;
+  left: 46%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.diferenciais-hint {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 16px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--color-manzi-black);
+  opacity: 0.45;
+}
+.diferenciais-hint-back {
+  display: block;
+  margin-top: 16px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #fff;
+  opacity: 0.75;
+}
+.diferenciais-bar {
+  position: relative;
+  height: 6px;
+  border-radius: 99px;
+  background: rgba(61, 7, 19, 0.12);
+  cursor: grab;
+  touch-action: none;
+}
+.diferenciais-bar:active {
+  cursor: grabbing;
+}
+.diferenciais-bar-thumb {
+  position: absolute;
+  top: -4px;
+  height: 14px;
+  border-radius: 99px;
+  background: var(--color-manzi-red);
+  transition: background 0.2s ease;
+}
+.diferenciais-bar:hover .diferenciais-bar-thumb {
+  background: var(--color-manzi-black);
 }
 
 /* mobile menu */
@@ -231,14 +330,3 @@ body {
   flex-shrink: 0;
 }
 
-/* diferenciais: marquee horizontal com flip no hover */
-@keyframes marquee-scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-.marquee-track {
-  animation: marquee-scroll 38s linear infinite;
-}
-.marquee-pause:hover .marquee-track {
-  animation-play-state: paused;
-}
