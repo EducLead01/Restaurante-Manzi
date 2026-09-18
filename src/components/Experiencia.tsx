@@ -31,11 +31,11 @@ export default function Experiencia() {
   }, [n]);
 
   return (
-    <section className="relative bg-manzi-white-2">
+    <section className="relative bg-manzi-white">
       <div className="text-center pt-20 pb-10 px-4">
         <h2
           className="font-display font-bold text-manzi-black"
-          style={{ fontSize: "clamp(28px,4vw,44px)", lineHeight: 1.1 }}
+          style={{ fontSize: "clamp(14px,3.8vw,34px)", lineHeight: 1.3 }}
         >
           Conheça nosso cardápio além dos executivos
         </h2>
