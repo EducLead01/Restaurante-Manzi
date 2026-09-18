@@ -31,7 +31,7 @@ const PILARES: ItemCardapio[] = [
   {
     titulo: "Executivo de Strogonoff de Frango",
     texto:
-      "Executivo completo: arroz soltinho, feijão de caldo, saladinha fresca, farofinha de frango da casa e acompanhamentos do dia.",
+      "Executivo completo: arroz soltinho, Strogonoff de Frango, batata palha e saladinha fresca.",
   },
   {
     titulo: "Executivo de Costelinha Suína",
