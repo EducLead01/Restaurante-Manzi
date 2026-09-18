@@ -126,7 +126,7 @@ function PainelTexto({ pilar }: { pilar: ItemCardapio }) {
       </svg>
       <div style={{ position: "relative", zIndex: 10, padding: "44px 40px 44px 68px" }}>
         <h3
-          className="font-display font-black text-manzi-black"
+          className="font-display font-black text-manzi-red"
           style={{ fontSize: "clamp(22px,2.6vw,30px)", lineHeight: 1.15 }}
         >
           {pilar.titulo}
