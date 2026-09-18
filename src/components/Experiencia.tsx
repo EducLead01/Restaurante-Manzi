@@ -1,12 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
-// TODO: substituir os gradientes pelos slides reais (fotos do salão, pratos, eventos)
 const SLIDES = [
-  { legenda: "Salão principal", gradient: "linear-gradient(135deg, #5D0018 0%, #3D0713 100%)" },
-  { legenda: "Prato assinatura", gradient: "linear-gradient(135deg, #8c3a3d 0%, #4a0e15 100%)" },
-  { legenda: "Adega", gradient: "linear-gradient(135deg, #ea1d2c 0%, #a81824 100%)" },
+  { legenda: "Prato Executivo", imagem: "/DSC_0593.webp" },
+  { legenda: "Petisco da Casa", imagem: "/DSC_0635.webp" },
+  { legenda: "Recheio na Medida", imagem: "/DSC_0659.webp" },
+  { legenda: "Sopa da Casa", imagem: "/DSC_0720.webp" },
 ];
 
 const STATS = [
@@ -31,9 +32,16 @@ export default function Experiencia() {
           className="flex h-full transition-transform duration-700 ease-out"
           style={{ width: `${n * 100}%`, transform: `translateX(-${idx * (100 / n)}%)` }}
         >
-          {SLIDES.map((slide) => (
+          {SLIDES.map((slide, i) => (
             <div key={slide.legenda} className="h-full relative" style={{ width: `${100 / n}%` }}>
-              <div className="absolute inset-0" style={{ background: slide.gradient }} />
+              <Image
+                src={slide.imagem}
+                alt={slide.legenda}
+                fill
+                sizes="100vw"
+                className="object-cover"
+                priority={i === 0}
+              />
               <div
                 className="absolute inset-0"
                 style={{
