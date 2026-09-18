@@ -41,7 +41,7 @@ const PILARES: ItemCardapio[] = [
   {
     titulo: "Executivo do Dia",
     texto:
-      "[Descrição: executivo que muda diariamente — combine com o cardápio da semana.]",
+      "Uma novidade por dia: todo dia um executivo diferente, com receitas que variam conforme o cardápio da semana.",
   },
   {
     titulo: "Tele Entregas",
