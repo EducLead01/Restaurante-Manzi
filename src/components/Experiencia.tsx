@@ -27,6 +27,15 @@ export default function Experiencia() {
 
   return (
     <section className="relative bg-manzi-white-2">
+      <div className="text-center pt-20 pb-10 px-4">
+        <h2
+          className="font-display font-bold text-manzi-black"
+          style={{ fontSize: "clamp(28px,4vw,44px)", lineHeight: 1.1 }}
+        >
+          Conheça nosso cardápio além dos executivos
+        </h2>
+      </div>
+
       <div className="relative overflow-hidden" style={{ height: "60vh", minHeight: 380, maxHeight: 560 }}>
         <div
           className="flex h-full transition-transform duration-700 ease-out"
@@ -46,12 +55,9 @@ export default function Experiencia() {
                 className="absolute inset-0"
                 style={{
                   background:
-                    "linear-gradient(to top, rgba(10,8,6,0.85) 0%, rgba(10,8,6,0.1) 55%, rgba(10,8,6,0.3) 100%)",
+                    "linear-gradient(to top, rgba(10,8,6,0.5) 0%, rgba(10,8,6,0.05) 55%, rgba(10,8,6,0.15) 100%)",
                 }}
               />
-              <span className="absolute bottom-10 left-8 text-manzi-white/80 font-bold text-sm uppercase tracking-widest">
-                {slide.legenda}
-              </span>
             </div>
           ))}
         </div>
