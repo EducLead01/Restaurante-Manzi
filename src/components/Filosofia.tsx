@@ -15,28 +15,28 @@ const PILARES: ItemCardapio[] = [
   {
     titulo: "Executivo de Bife Bovino",
     texto:
-      "Executivo completo: arroz soltinho, feijão de caldo, saladinha fresca, farofinha de carne da casa e acompanhamentos do dia.",
+      "Executivo completo: arroz cristal soltinho, Bife Bovino, feijão de caldo, saladinha fresca, farofinha de carne da casa e acompanhamentos do dia.",
     imagem: "/cardapio/executivo-bife-bovino.webp",
   },
   {
     titulo: "Executivo de Carne de Panela",
     texto:
-      "Executivo completo: arroz soltinho, feijão de caldo, saladinha fresca, farofinha de carne da casa e acompanhamentos do dia.",
+      "Executivo completo: arroz cristal soltinho, Carne de Panela, feijão de caldo, saladinha fresca, farofinha de carne da casa e acompanhamentos do dia.",
   },
   {
     titulo: "Executivo de Filé de Frango Grelhado",
     texto:
-      "Executivo completo: arroz soltinho, feijão de caldo, saladinha fresca, farofinha de frango da casa e acompanhamentos do dia.",
+      "Executivo completo: arroz cristal soltinho, Filé de Frango Grelhado, feijão de caldo, saladinha fresca, farofinha de frango da casa e acompanhamentos do dia.",
   },
   {
     titulo: "Executivo de Strogonoff de Frango",
     texto:
-      "Executivo completo: arroz soltinho, Strogonoff de Frango, batata palha e saladinha fresca.",
+      "Executivo completo: arroz cristal soltinho, Strogonoff de Frango, batata palha e saladinha fresca.",
   },
   {
     titulo: "Executivo de Costelinha Suína",
     texto:
-      "Executivo completo: arroz soltinho, feijão de caldo, saladinha fresca, farofinha de carne suína da casa e acompanhamentos do dia.",
+      "Executivo completo: arroz cristal soltinho, Costelinha Suína, feijão de caldo, saladinha fresca, farofinha de carne suína da casa e acompanhamentos do dia.",
   },
   {
     titulo: "Executivo do Dia",
