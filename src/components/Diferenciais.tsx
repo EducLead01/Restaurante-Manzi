@@ -46,6 +46,53 @@ const ITENS = [
       </svg>
     ),
   },
+  {
+    cor: "var(--color-manzi-red)",
+    titulo: "Molho Verde",
+    texto: "Fresco e herbáceo, dá leveza a qualquer prato.",
+    icone: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 21c-4-1-8-5-8-10 0-4 3-7 7-7 5 0 9 4 9 9 0 5-4 8-8 8Z" />
+        <path d="M8 16c2-4 4-7 8-10" />
+      </svg>
+    ),
+  },
+  {
+    cor: "var(--color-manzi-marsala)",
+    titulo: "Molho de Baconese",
+    texto: "Maionese cremosa com bacon crocante, direto pro sabor.",
+    icone: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+        <path d="M3 8c3-2 4 2 7 0s4-2 7 0 4 2 7 0" />
+        <path d="M3 12.5c3-2 4 2 7 0s4-2 7 0 4 2 7 0" />
+        <path d="M3 17c3-2 4 2 7 0s4-2 7 0 4 2 7 0" />
+      </svg>
+    ),
+  },
+  {
+    cor: "var(--color-manzi-black)",
+    titulo: "Adicional de Ovo",
+    texto: "Ovo fresquinho para completar o seu prato.",
+    icone: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 21c4.5 0 7-3 7-7.5C19 8 15.5 3 12 3S5 8 5 13.5C5 18 7.5 21 12 21Z" />
+        <circle cx="12" cy="13" r="3" />
+      </svg>
+    ),
+  },
+  {
+    cor: "var(--color-manzi-bordo)",
+    titulo: "Adicional de Carne",
+    texto:
+      "Escolha entre carne de panela, bife bovino, filé de frango grelhado ou costelinha suína.",
+    icone: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+        <path d="M4 14c0-5 4-9 9-9 4 0 7 3 7 6 0 4-4 6-8 6-2 0-3 1-3 2 0 1-1 2-3 2-2 0-3-2-2-4 .5-1 0-2-1-3Z" />
+        <circle cx="9" cy="12" r="1.1" fill="currentColor" stroke="none" />
+        <circle cx="13" cy="10" r="0.9" fill="currentColor" stroke="none" />
+      </svg>
+    ),
+  },
 ];
 
 function Card({
