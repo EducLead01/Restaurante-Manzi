@@ -8,6 +8,11 @@ const SLIDES = [
   { legenda: "Petisco da Casa", imagem: "/DSC_0635.webp" },
   { legenda: "Recheio na Medida", imagem: "/DSC_0659.webp" },
   { legenda: "Sopa da Casa", imagem: "/DSC_0720.webp" },
+  { legenda: "Croquetes da Casa", imagem: "/DSC_0613.webp" },
+  { legenda: "Crocante por Fora", imagem: "/DSC_0618.webp" },
+  { legenda: "Happy Hour", imagem: "/DSC_0639.webp" },
+  { legenda: "Tropeiro com Vinagrete", imagem: "/DSC_0695.webp" },
+  { legenda: "Sopa com Pão na Chapa", imagem: "/DSC_0710.webp" },
 ];
 
 const STATS = [
