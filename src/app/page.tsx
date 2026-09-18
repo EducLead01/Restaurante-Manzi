@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Filosofia from "@/components/Filosofia";
-import Avaliacoes from "@/components/Avaliacoes";
 import Experiencia from "@/components/Experiencia";
 import Diferenciais from "@/components/Diferenciais";
 import Footer from "@/components/Footer";
@@ -12,7 +11,7 @@ export default function Home() {
       <Header />
       <main className="flex-grow">
         <Filosofia />
-        <Avaliacoes />
+        {/* Avaliações: oculta temporariamente, componente mantido para reativar depois */}
         <Experiencia />
         <Diferenciais />
       </main>
