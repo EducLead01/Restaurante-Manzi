@@ -44,7 +44,7 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               className="hidden md:inline-flex items-center font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-full text-white transition-opacity hover:opacity-90"
-              style={{ background: "#25D366" }}
+              style={{ background: "#00674F" }}
             >
               Peça pelo WhatsApp
             </a>
@@ -84,7 +84,7 @@ export default function Header() {
             rel="noopener noreferrer"
             onClick={() => setOpen(false)}
             className="font-bold text-sm uppercase tracking-wider px-6 py-3.5 rounded-full text-white text-center"
-            style={{ background: "#25D366" }}
+            style={{ background: "#00674F" }}
           >
             Peça pelo WhatsApp
           </a>

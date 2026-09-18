@@ -59,7 +59,7 @@ function BotaoPedido({ titulo }: { titulo: string }) {
       target="_blank"
       rel="noopener noreferrer"
       className="font-bold text-xs uppercase tracking-wider inline-block rounded-full text-white"
-      style={{ background: "#25D366", padding: "12px 26px" }}
+      style={{ background: "#00674F", padding: "12px 26px" }}
     >
       Fazer pedido rápido
     </a>
@@ -83,7 +83,7 @@ function PainelFoto({ pilar }: { pilar: ItemCardapio }) {
         <p className="mt-3" style={{ fontSize: 15, lineHeight: 1.7, color: "#1a1a1a" }}>
           {pilar.texto}
         </p>
-        <div className="mt-6">
+        <div className="mt-6 text-center">
           <BotaoPedido titulo={pilar.titulo} />
         </div>
       </div>
@@ -134,7 +134,7 @@ function PainelTexto({ pilar }: { pilar: ItemCardapio }) {
         <p className="mt-4" style={{ fontSize: 15, lineHeight: 1.7, maxWidth: 520, color: "#1a1a1a" }}>
           {pilar.texto}
         </p>
-        <div className="mt-8">
+        <div className="mt-8 text-center">
           <BotaoPedido titulo={pilar.titulo} />
         </div>
       </div>
