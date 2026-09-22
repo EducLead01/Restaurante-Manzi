@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 
-const WHATSAPP_NUMERO = "5562942630696";
+/** Número do recrutamento — diferente do WhatsApp de pedidos usado no resto do site. */
+const WHATSAPP_NUMERO = "5562993431310";
 
 declare global {
   interface Window {
