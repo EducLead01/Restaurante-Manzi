@@ -4,10 +4,11 @@ import Script from "next/script";
 import FormularioVaga from "@/components/FormularioVaga";
 
 /**
- * Defina NEXT_PUBLIC_META_PIXEL_ID no .env.local e nas variáveis de ambiente da
- * Vercel. Sem a variável, o pixel simplesmente não é injetado.
+ * Pixel da Meta do conjunto de dados "Manzi Site". ID de pixel não é segredo —
+ * ele fica visível no HTML de qualquer página que o use. Dá pra apontar pra
+ * outro pixel (um de teste, por exemplo) com NEXT_PUBLIC_META_PIXEL_ID.
  */
-const PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID;
+const PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID ?? "1297798785700860";
 
 export const metadata: Metadata = {
   title: "Vaga: Auxiliar de Cozinha | Manzi Restaurante",
