@@ -4,6 +4,12 @@ import { useState } from "react";
 
 const WHATSAPP_NUMERO = "5562942630696";
 
+declare global {
+  interface Window {
+    fbq?: (...args: unknown[]) => void;
+  }
+}
+
 type Resposta = "sim" | "nao";
 
 type Pergunta = {
@@ -19,14 +25,6 @@ type Pergunta = {
 };
 
 const PERGUNTAS: Pergunta[] = [
-  {
-    id: "mulher",
-    texto: "Você se identifica como mulher?",
-    ajuda:
-      "Esta vaga integra uma ação afirmativa para ampliar a presença de mulheres na nossa cozinha, nos termos do art. 373-A, parágrafo único, da CLT.",
-    elimina: "nao",
-    resumo: "Se identifica como mulher",
-  },
   {
     id: "carteira",
     texto: "Está disposta a assinar a carteira imediatamente?",
@@ -98,8 +96,13 @@ export default function FormularioVaga() {
           </h1>
           <p className="mt-4 max-w-xl text-sm leading-relaxed text-manzi-white/70">
             Av. Bernardo Sayão, Nº 2159 — Setor Centro Oeste, Goiânia. Registro em
-            carteira desde o primeiro dia. Responda quatro perguntas rápidas e, se o
+            carteira desde o primeiro dia. Responda três perguntas rápidas e, se o
             perfil bater, você fala com a gente no WhatsApp.
+          </p>
+
+          <p className="mt-4 max-w-xl border-l-2 border-manzi-red/50 pl-4 text-xs leading-relaxed text-manzi-white/50">
+            Esta vaga integra um programa de ação afirmativa para ampliar a presença de
+            mulheres na nossa cozinha, nos termos do art. 373-A, parágrafo único, da CLT.
           </p>
         </header>
 
@@ -193,6 +196,7 @@ export default function FormularioVaga() {
                   href={whatsappHref}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => window.fbq?.("track", "Lead")}
                   className="flex min-h-[52px] flex-1 items-center justify-center rounded-full px-6 text-sm font-bold uppercase tracking-wider text-white transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-manzi-black"
                   style={{ background: "#00674F" }}
                 >
